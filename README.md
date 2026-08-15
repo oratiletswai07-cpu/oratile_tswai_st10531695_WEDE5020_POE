@@ -3,37 +3,29 @@ Sweet cakes bakery is a fictional local bakery, founded in 2001 by Jake Wooder i
 
  
 
-Website goals and objectives 
+Website goals and objectives:
 
-Increase brand visibility an attract new local customers 
-
-Allow customers to view the menu and submit enquiries for custom cakes and catering  
-
-Establish a warm, welcoming online identity consistent with the bakery’s story  
-
+Increase brand visibility an attract new local customers.
+Allow customers to view the menu and submit enquiries for custom cakes and catering.
+Establish a warm, welcoming online identity consistent with the bakery’s story.
 Allow 24/7 accessibility. 
 
  
 
 Key performance indicator 
 
-Number of monthly enquiries form submissions  
-
-Website traffic and time spent on the menu  
+Number of monthly enquiries form submissions.
+Website traffic and time spent on the menu.
 
  
 
-Key features and functionality 
+Key features and functionality:
 
-Home page: introduction, featured products, and opening hours 
-
-about page: baker’s story, the team, and the bakery’s background and also future expectation 
-
-Menu page: table of products with descriptions and prices  
-
-Enquiry page: photos of cakes, breads, sweets and pastries and ingredients  
-
-Contact page: enquiry forms for custom orders, embedded map showing location, and contact numbers 
+Home page: introduction, featured products, and opening hours.
+about page: baker’s story, the team, and the bakery’s background and also future expectation.
+Menu page: table of products with descriptions and prices.
+Enquiry page: photos of cakes, breads, sweets and pastries and ingredients.
+Contact page: enquiry forms for custom orders, embedded map showing location, and contact numbers. 
 
  
 
