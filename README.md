@@ -52,6 +52,18 @@ Part 1 Details
 
 Part one covers planning and structure: the website project proposal, content research and sourcing, the sitemap, and the initial HTML files for all 5 pages (structure and content only no CSS/ JavaScript). 
 
+Changelog  :
+Date and what was changed 
+
+[15/08/2026] - (home page) added a lang attribute to the html tag for accessibility  
+
+[15/08/2026] - (about page) I shifted the strong attribute to another sentence  
+
+[15/08/2026] - (menu page) I added prices to the “featured products” 
+
+[15/08/2026] - (enquiry page) fixed the error on the html comment and added more text 
+
+[15/08/2026] - (contact page) added a strong tag to indicate the importance of the text 
 
 References:
 
