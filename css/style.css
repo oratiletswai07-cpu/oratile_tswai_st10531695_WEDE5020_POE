@@ -141,7 +141,7 @@ nav {
 }
 
 .product:hover img {
-    transform: translateY(-6px);
+    transform: translateY(-15px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.2);
 }
 .product h3 {
@@ -153,4 +153,36 @@ nav {
     font-size: 0.9rem;
     color: #6b523B;
     margin-top: 4px;
+}
+.foot h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 50px;
+    text-shadow: black  4px 3px 0px;
+}
+.foot h2 em{ 
+    color: #FFFF99
+}
+.foot {
+    text-align: center;
+    word-spacing: 5px;
+    font-size: 20px;
+}
+.foot li { 
+    padding: 5px
+}
+.bookings {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color:  gold;
+    color: black
+}
+.bookings:hover{ 
+    color: yellow;
+    text-shadow: 0 0 15px brown;
+}
+.bookings:active{
+    color: blue
 }
