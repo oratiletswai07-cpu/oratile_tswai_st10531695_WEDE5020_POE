@@ -1,25 +1,18 @@
 * {
     box-sizing: border-box;
-    color: white;
     margin: 0;
     padding: 0;
-    
 }
 
 body {
-    font-family: Georgia, serif, Arial;
+    font-family: Georgia, Arial, serif ;
     background-color: rgb(211, 176, 4);
-    
-}
-
-header {
-    border: 2px, white;
-    border-radius: 20;
+    color: white ;
 }
 
 nav {
     width: 100%;
-    padding: 1 rem 5%;
+    padding: 1px 1px;
     background: gold;
     border: 3px solid white;
     border-radius: 50px;
@@ -34,9 +27,8 @@ nav {
 
 .logo {
     margin-right: auto;
-
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -53,11 +45,11 @@ nav {
     font-size: 1.05rem;
     font-weight: 500;
     text-decoration: none;
-    text-shadow: 0.3s;
-    margin-right: 30px;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
     border: 1px solid white;
     border-radius: 20px;
-    border-width: 3px;
+    border-width: 2px;
     padding: 10px;
 }
 
@@ -83,30 +75,31 @@ nav {
 }
 .box-1 h1 em{
     color: #FFFF99;
-    text-shadow:  black  4px 3px 0px;
+    text-shadow:   4px 3px 0px black ;
 }
 .box-1 h3 em{ 
     font-size: 20px;
-   text-shadow:  black  4px 3px 0px;
+   text-shadow:    4px 3px 0px black;
 }
 .box-2 h3 {
     text-align: center;
     padding-bottom: 20px;
     font-size: 50px;
-    text-shadow: black  4px 3px 0px;
+    text-shadow: 4px 3px 0px black;
 }
 .box-2 h3 em{
     color: #FFFF99
 }
 .box-2 {
     text-align: center;
-    font-size: 18px
+    font-size: 18px;
+    color:#4A3524
 }
 .box-3 h2{
     text-align: center;
     padding-bottom: 20px;
     font-size: 45px;
-    text-shadow: black  4px 3px 0px;
+    text-shadow: 4px 3px 0px black;
 }
 .box-3 h2 em{
     color: #FFFF99
@@ -127,7 +120,7 @@ nav {
     flex-wrap: wrap;
 }
 .product {
-    display: inline block;
+    display: inline-block;
     max-width: 350px;
     text-decoration:none;
     color: inherit;
@@ -135,7 +128,7 @@ nav {
 .product img {
     width: 100%;
     border-radius: 8px;
-    border:2px soild #DCC49E;
+    border:2px solid #DCC49E;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -158,7 +151,7 @@ nav {
     text-align: center;
     padding-bottom: 20px;
     font-size: 50px;
-    text-shadow: black  4px 3px 0px;
+    text-shadow:   4px 3px 0px black;
 }
 .foot h2 em{ 
     color: #FFFF99
@@ -167,6 +160,7 @@ nav {
     text-align: center;
     word-spacing: 5px;
     font-size: 20px;
+    color:#4A3524
 }
 .foot li { 
     padding: 5px
@@ -177,7 +171,7 @@ nav {
     border-radius: 10px;
     text-decoration: none;
     background-color:  gold;
-    color: black
+    color: darkgoldenrod
 }
 .bookings:hover{ 
     color: yellow;
@@ -185,4 +179,7 @@ nav {
 }
 .bookings:active{
     color: blue
+}
+.foot ul {
+    padding-bottom: 10px
 }
