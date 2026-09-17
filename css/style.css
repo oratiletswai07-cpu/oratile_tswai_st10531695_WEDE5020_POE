@@ -261,3 +261,72 @@ nav {
     margin: 10px 15px;
     text-align: center; 
 }
+
+/* this is css coding for the enquiries page*/
+
+.tin-1 { 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/introduction-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    margin-bottom: 20px;
+    padding: 300px;
+    height: 350px;
+    font-size: 23px;
+}
+.tin-1 h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 45px;
+    text-shadow: 4px 3px 0px #4A3524;
+    color: #FFFF99
+}
+.body-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color:#4A3524
+}
+.form {
+    max-width: 700px;
+    width: 100%;
+    background:gold;
+    padding:25px 30px;
+    border-radius: 10px;
+}
+.inside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tins {
+    margin:15px 0 9px 0;
+    width: calc(100% / 2 - 20px); 
+    
+}
+.inside .tins input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #4A3524;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.inside .tins textarea{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #4A3524;
+    padding-left: 15px;
+    font-size: 16px;
+     border-bottom-width: 2px;
+}
+input:focus, input:valid{
+    border-color:#4A3524
+}
+.inside .tins textarea{
