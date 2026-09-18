@@ -382,8 +382,8 @@ input:focus, input:valid{
     resize: none;
 }
 .contact-form button {
-    background:#4b0ea0;
-    color: white;
+    background:#4A3524;
+    color:#FFFF99;
     border: none; 
     padding: 12px 22px;
     border-radius: 5px;
