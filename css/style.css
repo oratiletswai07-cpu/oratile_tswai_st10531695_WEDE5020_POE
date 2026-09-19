@@ -550,3 +550,15 @@ iframe {
         flex-direction: column;
     }
 }
+/*Mobile breakpoint */
+@media (max-width: 480px) {
+    .box-1, .container-1, .tin-1, .menu-start {
+        padding: 100px 20px;
+        height: auto;
+    }
+    .box-1 h1 {
+        font-size: 1.5rem;
+    }
+    .tins {width:100%;
+    }
+}
