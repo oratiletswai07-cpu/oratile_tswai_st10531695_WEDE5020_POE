@@ -422,7 +422,7 @@ iframe {
 
 .menu-start h1{
     text-align: center;
-    font-size: 60px;
+    font-size: 6vw;
     text-shadow: 4px 3px 0px #4A3524;
     color: #FFFF99;
     margin-bottom: 10px;
@@ -537,10 +537,14 @@ iframe {
     .navigation {
         flex-direction: column;
         gap: 1rem;
+        
+    }
+    nav{
+        padding:20px
     }
     .featured-products {
         flex-direction: column;
-        align-items: cneter;
+        align-items: center;
     }
     .container {
         flex-direction: column;
@@ -559,6 +563,12 @@ iframe {
     .box-1 h1 {
         font-size: 1.5rem;
     }
-    .tins {width:100%;
+    .tins {
+        width:100%;
     }
+    .category-nav {
+        padding: 20px;
+        margin: auto;
+       
+}
 }
