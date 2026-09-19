@@ -55,9 +55,70 @@ Date and what was changed
 
 [15/08/2026] - (enquiry page) fixed the error on the html comment and added more text 
 
-[15/08/2026] - (contact page) added a strong tag to indicate the importance of the text 
+[15/08/2026] - (contact page) added a strong tag to indicate the importance of the text
+
+Part 2: CSS Styling and Responsive Design
+
+Overview:
+Building on Part 1's HTML structure, Part 2 applied a full external stylesheet
+(`css/style.css`) across all five pages, establishing a consistent tan/brown/gold
+visual identity for Sweet Cakes Bakery, followed by responsive styling for tablet
+and mobile devices.
+
+External Stylesheet:
+One external stylesheet (`css/style.css`) linked to all five HTML pages
+(index.html, about.html, menu.html, enquiries.html, contact.html).
+
+Base/Default Styles:
+Site-wide font family (Georgia/Arial/serif), base colour scheme, box-sizing reset, and margin/padding reset applied via the universal selector and `body`.
+
+Typography:
+Font family, size, weight, and text-shadow styling applied consistently across
+headings and body text on every page.
+
+Layout Structure:
+Flexbox used throughout: navigation bar, featured product cards, About page
+image/text rows, contact page info/form split, and the enquiries form grid.
+
+Decoration and Colour:
+Tan/gold/brown colour palette applied via `background-color`, `border`,
+`border-radius`, and `box-shadow` across cards, buttons, and containers
+Background image overlays used on hero sections (Home, About, Menu, Enquiries)
+
+Pseudo-Classes:
+`:hover` used on navigation links, product cards (lift + shadow effect), and
+buttons
+`:active` used on navigation links and buttons
+`:focus` used on form input fields
+
+Responsive Design:
+Media queries added for tablet (max-width: 768px) and mobile (max-width: 480px)
+breakpoints.
+Layout adjustments: navigation stacks vertically, product cards move to a
+single column, About page image/text rows stack, contact page reflows to a
+single column.
+
+Typography adjustments:
+heading sizes reduced on smaller screens
+
+Image adjustments: 
+images scale responsively using relative widths and `height: auto`.
+
+Changelog (Part 1 Feedback Addressed)
+[16/09/2026] - Fixed unclosed `<p>` tag in menu.html introduction section
+
+[16/09/2026] - Added missing `<main>` wrapper to contact.html and enquiries.html for consistency with other pages.
+
+[16/09/2026] - Fixed multiple `<h1>` issue on contact.html (only one `<h1>` per page now)
+
+[16/09/2026] - Corrected capitalisation of "Jake Wooder" and "South Africa" throughout.
+
+[16/09/2026] - Removed table misuse on the homepage Featured Products section, replaced with semantic Flexbox card layout.
+
+more css coding will be applied in part 3 of the assignment, because due to part 2's requirements( only css code) some css coding were limited because it required javascript coding to be perfect for eaxmple the menu page.
 
 References:
+Part 1 refereneces:
 
 References images  
 
@@ -113,18 +174,31 @@ Cañas, E. (n.d.) Cake with Fruits. [Online] Unsplash. Available at: https://uns
 
 Sadeqian, L. (n.d.) A White Cake with Pink Flowers on Top of It. [Online] Unsplash. Available at: https://unsplash.com/photos/a-white-cake-with-pink-flowers-on-top-of-it-CWburPtXtHM [Accessed: 8 August 2026]. 
 
- 
-
 References for design inspiration:
 
 Black Forest Bakery (n.d.) Home. [Online] Available at: https://www.blackforestbakery.co.za [Accessed: 8 August 2026]. 
 
 Reisman's Bakery (n.d.) Home. [Online] Available at: https://reismansbakery.com [Accessed: 8 August 2026]. 
 
-References for budget  
+References for budget:
 
 New Perspective Studio (n.d.) *Website Design Cost South Africa*. [Online] Available at: https://www.newperspectivestudio.co.za/wp/what-is-the-cost-of-creating-a-website-in-south-africa/ [Accessed: 8 August 2026]. 
 
 Dot Digital (n.d.) *How Much Does a Website Cost in South Africa? 2026 Guide*. [Online] Available at: https://dotdigital.co.za/website-cost-south-africa/ [Accessed: 8 August 2026]. 
 
+ Part 2 references:
  
+CSSnippets. 2025. Learn CSS Display Property: Inline, Block, Inline-Block Explained in 4 Minutes! [YouTube video]. 23 June. Available at: https://youtu.be/zI6DW1Sinqc [Accessed: 16 September 2026].
+
+CSSnippets. 2025. Navbar CSS Tutorial: 5 Ways to Create a Navigation Bar with Flexbox [YouTube video]. 25 Sept.  Available at: https://www.youtube.com/watch?v=HmaQwuKUYTc&t=1s [Accessed: 16 September 2026].
+
+Coding2GO.2024. Learn CSS Flexbox in 20 Minutes (Course) [YouTube video]. 7 Aug. Available at:https://www.youtube.com/watch?v=wsTv9y931o8&t=499s [Accessed: 18 September 2026].
+
+CodzSword.2024. Learn How to Align Text and Image Side by Side Using CSS For Any Device [YouTube video]. 2 sept. Available at: https://www.youtube.com/watch?v=ZYMw7jGxm60 [Accessed: 17 September 2026].
+
+CodingLab. 2021. Responsive Registration Form in HTML & CSS [YouTube video]. 5 Jan. Available at: https://www.youtube.com/watch?v=okbByPWS1Xc&list=PLImJ3umGjxdDqTlZhQxXBeGij9Oa9Xjnj [Accessed: 16 September 2026].
+
+Dani Krossing. 2023. 24 | MAKE A WEBSITE RESPONSIVE FOR ALL DEVICES | 2023 | Learn HTML and CSS Full Course for Beginners [YouTube video]. 12 Feb. Available at: https://www.youtube.com/watch?v=UUjNEMXZA-k&t=210s [Accessed: 16 September 2026].
+
+
+Bro Code. 2023. How to include a CSS background image [YouTube video]. 21 sept. Available at: https://www.youtube.com/watch?v=_oFWg_NlKdo [Accessed: 16 September 2026].
