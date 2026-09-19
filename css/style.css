@@ -564,6 +564,16 @@ iframe {
     .contact-card {
         flex-direction: column;
     }
+     .box-1, .container-1, .tin-1, .menu-start {
+        height:auto;
+        padding: 60px 20px;
+     }
+     .tin-1 h1{
+        font-size: 1.8rem;
+     }
+     .menu-start h1{
+        font-size: 2rem;
+     }
 }
 /*Mobile breakpoint */
 @media (max-width: 480px) {
