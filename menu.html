@@ -10,20 +10,27 @@
 
 <body class="body-5">
     <header>
-
+ <input type="checkbox" id="menu-check" class="menu-check">
+    <header>
         <nav>
-
-            <a href="index.html"> <img src="images/sweet-cakes-bakery-logo.png" class="logo" alt="logo" width="100"
+            <!--this logo goes to the home page-->
+            <a href="index.html"><img src="images/sweet-cakes-bakery-logo.png" class="logo" alt="logo" width="100"
                     height="100"></a>
-
+                     <!-- Phone logo: opens the sidebar -->
+            <label for="menu-check" class="logo-label">
+                <img src="images/sweet-cakes-bakery-logo.png" class="logo" alt="Open menu" width="100" height="100">
+            </label>
             <ul class="navigation" id="Menu">
-                <li><a href="index.html">Home</a> </li>
-                <li><a href="about.html">About</a> </li>
-                <li><a href="menu.html">Menu</a> </li>
-                <li><a href="enquiries.html">Enquiries</a> </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="close-item"><label for="menu-check">✕ Close</label></li>
+                <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
+                <li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li>
+                <li><a href="menu.html"><span class="nav-icon">🍰</span> Menu</a></li>
+                <li><a href="enquiries.html"><span class="nav-icon">📝</span> Enquiries</a></li>
+                <li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li>
             </ul>
         </nav>
+        <!--a dark area clicking this will close the sidebar-->
+        <label for="menu-check" class="menu-overlay"></label>
     </header>
     <div class="menu-start" >
         <h1><em>Menu</em></h1>

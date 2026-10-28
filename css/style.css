@@ -538,6 +538,22 @@ iframe {
 .product img, .container img, .products-cat img {
     height: auto;
 }
+/*css sidebar*/
+.menu-check {
+    display: none;
+}
+.logo-label {
+    display: none;
+}
+.nav-icon {
+    display: none;
+}
+.close-item {
+    display: none;
+}
+.sidebar-overylay {
+    display: none;
+}
 /*tablet breakpoint*/
 @media (max-width: 768px)  {
     .conatainer, .container:nth-of-type(4) {
