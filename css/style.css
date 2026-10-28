@@ -612,7 +612,14 @@ iframe {
         color:#4A3524;
         cursor: pointer;
     }
-    
+     /* dark overlay */
+    .menu-check:checked ~ header .sidebar-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+    }
 
     .container, .container:nth-of-type(4) {
         flex-direction: column;
