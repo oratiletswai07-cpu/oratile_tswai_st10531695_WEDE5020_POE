@@ -554,6 +554,80 @@ iframe {
 .sidebar-overlay {
     display: none;
 }
+/*sidebar layout menu */
+.menu-layout {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    align-items: flex-start;
+}
+.menu-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background: gold;
+    border: 3px soild white;
+    border-radius: 20px;
+    padding:20px;
+    position: sticky;
+    top: 20px;
+}
+.menu-sidebar h3 {
+    color: #4A3524;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-decoration: underline;
+}
+.menu-sidebar ul{
+    list-style: none;
+}
+.menu-sidebar li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 10px;
+    color:  #4A3524;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px soild rgba(255, 255, 255, 0.6);
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.buttom-button a:hover {
+         text-shadow: 6px 6px 6px #4A3524;
+    text-decoration: underline;
+}
+.buttom-button a:active {
+    color: gold;
+}
+.buttom-button-2 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #4A3524;
+    border-radius: 50px;
+    text-align: center;
+    background: gold;
+    border: 3px solid white;
+    padding: 10px 20px;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+.menu-sidebar li:last-child a{
+    border-bottom: none;
+}
+.menu-sidebar .icon {
+    font-size: 1.3rem; 
+}
+.menu-sidebar li a:hover {
+    background-color:  rgba(255, 255, 255, 0.4);
+    padding-left: 16px;   /*slides right a little on hover*/
+    border-radius: 10px;
+}
+.menu-sidebar li a:active{
+    color: white;
+}
+.menu-content {
+    flex: 1;
+}
 /*tablet breakpoint*/
 @media (max-width: 768px)  {
       nav { 
@@ -636,16 +710,8 @@ iframe {
         inset: 0;
         background: rgba(0, 0, 0, 0.5);
         z-index: 900;
-    }
+    }  
 
-    .container, .container:nth-of-type(4) {
-        flex-direction: column;
-        text-align: center;
-    }
-    .container img {
-        width: 100%;
-        max-width: 400px;
-    }
     .navigation {
         flex-direction: column;
         gap: 1rem;
@@ -653,12 +719,7 @@ iframe {
     .category-nav h3 {
         margin-bottom: 10px;
     }
-    .nav-menu {
-        margin-left: 0;
-    }
-    nav{
-        padding:20px;
-    }
+  
     .featured-products {
         flex-direction: column;
         align-items: center;
@@ -679,6 +740,13 @@ iframe {
      }
      .menu-start h1{
         font-size: 2rem;
+     }
+      .menu-layout {
+        flex-direction: column;
+     }
+     .menu-sidebar {
+        width: 100%;
+        position: static;  /* sticky doesnt work well on top of content*/
      }
 }
 /*Mobile breakpoint */

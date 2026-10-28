@@ -33,28 +33,35 @@
         <label for="menu-check" class="menu-overlay"></label>
     </header>
     <div class="menu-start" >
-        <h1><em>Menu</em></h1>
-        <p><strong><em>Welcome to our goodies, pick your freshness and enjoy the taste of our baked goods.
+        <h1 ><em>Menu</em></h1>
+        <p id="Menu"><strong><em>Welcome to our goodies, pick your freshness and enjoy the taste of our baked goods.
                 </em></strong>
         </p>
 </div>
-<div class="nav-whole">
-    <nav class="category-nav" id="featured">
-        <!--this is the navigation bar for the menu page, it will link to the different sections of the menu page, bsicslly its going to be a side bar navigation for the categories-->
-        <h3><em>Categories</em></h3>
-        <div class="nav-menu">
+<div class="menu-layout">
+
+        <aside class="menu-sidebar">
+            <h3><em>Categories</em></h3>
             <ul>
-                <li><a href="#featured">Featured products</a></li>
-                <li><a href="#Bread">Bread</a></li>
-                <li><a href="#Pastries">Pastries and croissants</a></li>
-                <li><a href="#Cakes">Cakes</a></li>
+                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
+                            class="arrow">›</span></a></li>
             </ul>
+        </aside>
+
+        <div class="menu-content">
+            <section class="products-cat"></section>
         </div>
-    </nav>
-</div>
+
+    </div>
 <!--with each category the sections are going to change-->
 <section class="products-cat">
-    <h2><em>Featured Goodies</em></h2>
+    <h2 id="featured"><em>Featured Goodies</em></h2>
     <img src="images/artisan-bread-and-pastries-product-1.jpg" alt="Golden croissant with strawberries" width="350"
         height="290">
     <p>Golden croissant with strawberries</p>
@@ -66,23 +73,29 @@
     <p>Chocolate topped celebration cake</p>
     <p> Price: R400</p>
 </section>
+<div class="menu-layout">
 
-<div class="nav-whole">
-    <nav class="category-nav" id="Bread">
-        <!--this is the navigation bar for the menu page, it will link to the different sections of the menu page, basicslly its going to be a side bar navigation for the categories-->
-        <h3><em>Categories</em></h3>
-        <div class="nav-menu">
+        <aside class="menu-sidebar">
+            <h3><em>Categories</em></h3>
             <ul>
-                <li><a href="#featured">Featured products</a></li>
-                <li><a href="#Bread">Bread</a></li>
-                <li><a href="#Pastries">Pastries and croissants</a></li>
-                <li><a href="#Cakes">Cakes</a></li>
+                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
+                            class="arrow">›</span></a></li>
             </ul>
+        </aside>
+
+        <div class="menu-content">
+            <section class="products-cat"></section>
         </div>
-    </nav>
-</div>
+
+    </div>
 <section class="products-cat">
-    <h2>Bread</h2>
+    <h2 id="Bread">Bread</h2>
     <img src="images/bread-with-black-seeds.jpg" alt="sesame seed loaf" width="350" height="300">
     <p>Sesame seed loaf</p>
     <p> Price: R38</p>
@@ -102,22 +115,29 @@
     <p>Bagels</p>
     <p>Price:R42</p>
 </section>
-<div class="nav-whole">
-    <nav class="category-nav" id="Pastries">
-        <!--this is the navigation bar for the menu page, it will link to the different sections of the menu page, bsicslly its going to be a side bar navigation for the categories-->
-        <h3><em>Categories</em></h3>
-        <div class="nav-menu">
+<div class="menu-layout">
+
+        <aside class="menu-sidebar">
+            <h3><em>Categories</em></h3>
             <ul>
-                <li><a href="#featured">Featured products</a></li>
-                <li><a href="#Bread">Bread</a></li>
-                <li><a href="#Pastries">Pastries and croissants</a></li>
-                <li><a href="#Cakes">Cakes</a></li>
+                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
+                            class="arrow">›</span></a></li>
             </ul>
+        </aside>
+
+        <div class="menu-content">
+            <section class="products-cat"></section>
         </div>
-    </nav>
-</div>
+
+    </div>
 <section class="products-cat">
-    <h2> Pastries and Croissants</h2>
+    <h2 id="Pastries"> Pastries and Croissants</h2>
     <img src="images/ferrero-cupcake-pastries.jpg" alt="ferrero rocher cupcake" width="350" height="350">
     <p>Ferrero rocher cupcake</p>
     <p> Price:R50</p>
@@ -137,23 +157,29 @@
     <p>Berry milk tart</p>
     <p>Price:R35</p>
 </section>
-<div class="nav-whole">
-    <nav class="category-nav" id="Cakes">
-        <!--this is the navigation bar for the menu page, it will link to the different sections of the menu page, bsicslly its going to be a side bar navigation for the categories-->
+<div class="menu-layout">
 
-        <h3><em>Categories</em></h3>
-        <div class="nav-menu">
+        <aside class="menu-sidebar">
+            <h3><em>Categories</em></h3>
             <ul>
-                <li><a href="#featured">Featured products</a></li>
-                <li><a href="#Bread">Bread</a> </li>
-                <li><a href="#Pastries">Pastries and croissants</a></li>
-                <li><a href="#Cakes">Cakes</a></li>
+                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
+                            class="arrow">›</span></a></li>
+                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
+                            class="arrow">›</span></a></li>
             </ul>
+        </aside>
+
+        <div class="menu-content">
+            <section class="products-cat"></section>
         </div>
-    </nav>
-</div>
+
+    </div>
 <section class="products-cat">
-    <h2>Cakes</h2>
+    <h2 id="Cakes">Cakes</h2>
     <img src="images/flower-cake.jpg" alt=" floral celebration cake" width="350" height="300">
     <p>Floral celebration cake</p>
     <p>Price:R380</p>
