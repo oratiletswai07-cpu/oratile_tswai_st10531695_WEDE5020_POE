@@ -329,6 +329,16 @@ nav {
 input:focus, input:valid{
     border-color:#4A3524
 }
+.submit-1 button{
+   background:#4A3524;
+    color:#FFFF99;
+    border: none; 
+    padding: 12px 22px;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-weight: bold;
+    font-size: 15p
+}
 
 /* this is css coding for the contact page*/
 .contact-card {
