@@ -640,6 +640,20 @@ iframe {
 }
 /*tablet breakpoint*/
 @media (max-width: 768px)  {
+    body .container,
+    body .container:nth-of-type(n) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    body .container img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    body .container .text {
+        width: 100%;
+    }
       nav { 
         backdrop-filter: none;  /*this is needed so that the fixed sidebar works */
     }
