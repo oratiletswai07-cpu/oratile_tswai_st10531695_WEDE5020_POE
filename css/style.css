@@ -551,7 +551,7 @@ iframe {
 .close-item {
     display: none;
 }
-.sidebar-overylay {
+.sidebar-overlay {
     display: none;
 }
 /*tablet breakpoint*/
@@ -564,7 +564,24 @@ iframe {
         display: none; 
     }
     .logo-label { 
-        display: block; margin-right: auto; cursor: pointer; 
+        display: block;
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        margin: 0;
+        z-index: 800;      
+        cursor: pointer;
+    }
+
+    .logo-label .logo {
+        width: 70px;
+        height: 70px;
+        background: gold;
+        border: 3px solid white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+    nav {
+    min-height: 100px;
     }
     /*sidebar when closed*/
     .navigation {
