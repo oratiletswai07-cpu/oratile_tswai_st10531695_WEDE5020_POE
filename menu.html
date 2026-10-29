@@ -1,202 +1,367 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/java.js" defer></script>
+
     <title>Menu - Sweet Cakes Bakery</title>
 </head>
 
-<body class="body-5">
+<body class="body-5" id="top">
 
- <input type="checkbox" id="menu-check" class="menu-check">
+    <!-- NAVIGATION -->
+    <input type="checkbox" id="menu-check" class="menu-check">
+
     <header>
         <nav>
-            <!--this logo goes to the home page-->
-            <a href="index.html"><img src="images/sweet-cakes-bakery-logo.png" class="logo" alt="logo" width="100"
-                    height="100"></a>
-                     <!-- Phone logo: opens the sidebar -->
+
+            <a href="index.html">
+                <img src="images/sweet-cakes-bakery-logo.png"
+                     class="logo" alt="Sweet Cakes Bakery logo"
+                     width="100" height="100">
+            </a>
+
             <label for="menu-check" class="logo-label">
-                <img src="images/sweet-cakes-bakery-logo.png" class="logo" alt="Open menu" width="100" height="100">
+                <img src="images/sweet-cakes-bakery-logo.png"
+                     class="logo" alt="Open menu"
+                     width="100" height="100">
             </label>
+
             <ul class="navigation" id="Menu">
-                <li class="close-item"><label for="menu-check">✕ Close</label></li>
-                <li><a href="index.html"><span class="nav-icon">🏠</span> Home</a></li>
-                <li><a href="about.html"><span class="nav-icon">ℹ️</span> About</a></li>
-                <li><a href="menu.html"><span class="nav-icon">🍰</span> Menu</a></li>
-                <li><a href="enquiries.html"><span class="nav-icon">📝</span> Enquiries</a></li>
-                <li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li>
+
+                <li class="close-item">
+                    <label for="menu-check">✕ Close</label>
+                </li>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="enquiries.html">Enquiries</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
             </ul>
         </nav>
-        <!--a dark area clicking this will close the sidebar-->
+
         <label for="menu-check" class="menu-overlay"></label>
     </header>
-    <div class="menu-start" >
-        <h1 ><em>Menu</em></h1>
-        <p><strong><em>Welcome to our goodies, pick your freshness and enjoy the taste of our baked goods.
-                </em></strong>
+
+
+    <!-- MENU HEADING -->
+    <section class="menu-start">
+
+        <h1><em>Our Menu</em></h1>
+
+        <p>
+            <strong>
+                Choose your sweetness and freshness!
+                Enjoy the taste of our freshly baked goods.
+            </strong>
         </p>
-</div>
-<div class="menu-layout">
 
+    </section>
+
+
+    <!-- MAIN MENU LAYOUT -->
+    <main class="menu-layout">
+
+        <!-- CATEGORY SIDEBAR -->
         <aside class="menu-sidebar">
-            <h3><em>Categories</em></h3>
+
+            <h3>Categories</h3>
+
             <ul>
-                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
-                            class="arrow">›</span></a></li>
+
+                <li>
+                    <a href="#featured">⭐ Featured products</a>
+                </li>
+
+                <li>
+                    <a href="#Bread">🍞 Bread</a>
+                </li>
+
+                <li>
+                    <a href="#Pastries">🥐 Pastries and croissants</a>
+                </li>
+
+                <li>
+                    <a href="#Cakes">🎂 Cakes</a>
+                </li>
+
             </ul>
+
         </aside>
 
+
+        <!-- PRODUCT CONTENT -->
         <div class="menu-content">
-            <section class="products-cat"></section>
+
+
+            <!-- FEATURED PRODUCTS -->
+            <section class="products-cat" id="featured">
+
+                <h2>Featured Goodies</h2>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <img src="images/artisan-bread-and-pastries-product-1.jpg"
+                             alt="Golden croissant with strawberries">
+
+                        <h3>Golden croissant with strawberries</h3>
+                        <p>Price: R28</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/chocolate-cake-product-2.jpg"
+                             alt="Classic chocolate cake">
+
+                        <h3>Classic chocolate cake</h3>
+                        <p>Price: R150</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/celebration-cake-product-3.jpg"
+                             alt="Chocolate topped celebration cake">
+
+                        <h3>Chocolate topped celebration cake</h3>
+                        <p>Price: R400</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BREAD -->
+            <section class="products-cat" id="Bread">
+
+                <h2>Bread</h2>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <img src="images/bread-with-black-seeds.jpg"
+                             alt="Sesame seed loaf">
+
+                        <h3>Sesame seed loaf</h3>
+                        <p>Price: R38</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/bread.jpg"
+                             alt="Farm white loaf">
+
+                        <h3>Farm white loaf</h3>
+                        <p>Price: R32</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/ginger-bread.jpg"
+                             alt="Gingerbread">
+
+                        <h3>Gingerbread</h3>
+                        <p>Price: R35</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/chocolate-chip-bread.jpg"
+                             alt="Chocolate chip bread">
+
+                        <h3>Chocolate chip bread</h3>
+                        <p>Price: R36</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/banana-bread.jpg"
+                             alt="Banana nut bread">
+
+                        <h3>Banana nut bread</h3>
+                        <p>Price: R45</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/bagul.jpg"
+                             alt="Bagels">
+
+                        <h3>Bagels (pack of 4)</h3>
+                        <p>Price: R42</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PASTRIES -->
+            <section class="products-cat" id="Pastries">
+
+                <h2>Pastries and Croissants</h2>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <img src="images/ferrero-cupcake-pastries.jpg"
+                             alt="Ferrero Rocher cupcake">
+
+                        <h3>Ferrero Rocher cupcake</h3>
+                        <p>Price: R50</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/chocolate-cupcake.jpg"
+                             alt="Chocolate cupcake">
+
+                        <h3>Chocolate cupcake</h3>
+                        <p>Price: R25</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/ciniomon-bun-for-pastries.jpg"
+                             alt="Cinnamon bun">
+
+                        <h3>Cinnamon bun</h3>
+                        <p>Price: R30</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/croissant-topped-with-chocolate.jpg"
+                             alt="Chocolate peanut croissants">
+
+                        <h3>Chocolate peanut croissants</h3>
+                        <p>Price: R32</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/croissant-topped.jpg"
+                             alt="Chocolate drizzle croissants">
+
+                        <h3>Chocolate drizzle croissants</h3>
+                        <p>Price: R30</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/milk-tart-with-red-black berries.jpg"
+                             alt="Berry milk tart">
+
+                        <h3>Berry milk tart</h3>
+                        <p>Price: R35</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CAKES -->
+            <section class="products-cat" id="Cakes">
+
+                <h2>Cakes</h2>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <img src="images/flower-cake.jpg"
+                             alt="Floral celebration cake">
+
+                        <h3>Floral celebration cake</h3>
+                        <p>Price: R380</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/strawberry-cake.jpg"
+                             alt="Strawberry cream cake">
+
+                        <h3>Strawberry cream cake</h3>
+                        <p>Price: R350</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/celebration-cake-product-3.jpg"
+                             alt="Chocolate topped cake">
+
+                        <h3>Chocolate topped cake</h3>
+                        <p>Price: R400</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/oreo-cake.jpg"
+                             alt="Oreo cake">
+
+                        <h3>Oreo cake</h3>
+                        <p>Price: R360</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/vegan-cake.jpg"
+                             alt="Fresh fruit cake">
+
+                        <h3>Fresh fruit cake</h3>
+                        <p>Price: R390</p>
+                    </article>
+
+
+                    <article class="product-card">
+                        <img src="images/vanilla-cake.jpg"
+                             alt="Vanilla blossom cake">
+
+                        <h3>Vanilla blossom cake</h3>
+                        <p>Price: R340</p>
+                    </article>
+
+                </div>
+
+            </section>
+
         </div>
 
-    </div>
-<!--with each category the sections are going to change-->
-<section class="products-cat">
-    <h2 id="featured"><em>Featured Goodies</em></h2>
-    <img src="images/artisan-bread-and-pastries-product-1.jpg" alt="Golden croissant with strawberries" width="350"
-        height="290">
-    <p>Golden croissant with strawberries</p>
-    <p> Price: R28</p>
-    <img src="images/chocolate-cake-product-2.jpg" alt="Classic chocolate cake" width="350" height="290">
-    <p>Classic chocolate cake</p>
-    <p> Price: R150</p>
-    <img src="images/celebration-cake-product-3.jpg" alt="Chocolate topped celebration cake" width="350" height="290">
-    <p>Chocolate topped celebration cake</p>
-    <p> Price: R400</p>
-</section>
-<div class="menu-layout">
+    </main>
 
-        <aside class="menu-sidebar">
-            <h3><em>Categories</em></h3>
-            <ul>
-                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
-                            class="arrow">›</span></a></li>
-            </ul>
-        </aside>
 
-        <div class="menu-content">
-            <section class="products-cat"></section>
-        </div>
+    <!-- BACK TO TOP -->
+    <div class="bottom-button">
+
+        <a href="#top">Back to top ↑</a>
 
     </div>
-<section class="products-cat">
-    <h2 id="Bread">Bread</h2>
-    <img src="images/bread-with-black-seeds.jpg" alt="sesame seed loaf" width="350" height="300">
-    <p>Sesame seed loaf</p>
-    <p> Price: R38</p>
-    <img src="images/bread.jpg" alt="farm white loaf" width="350" height="300">
-    <p>Farm white loaf</p>
-    <p> Price:R32</p>
-    <img src="images/ginger-bread.jpg" alt="gingerbread" width="350" height="300">
-    <p>Gingerbread</p>
-    <p>Price:R35</p>
-    <img src="images/chocolate-chip-bread.jpg" alt="chocolate chip loaf" width="350" height="350">
-    <p> chocolate chip bread</p>
-    <p>Price: R36</p>
-    <img src="images/banana-bread.jpg" alt="banana nut bread" width="350" height="300">
-    <p>Banana nut bread</p>
-    <p> Price: R45</p>
-    <img src="images/bagul.jpg" alt="Bagels (pack of 4)" width="350" height="300">
-    <p>Bagels</p>
-    <p>Price:R42</p>
-</section>
-<div class="menu-layout">
 
-        <aside class="menu-sidebar">
-            <h3><em>Categories</em></h3>
-            <ul>
-                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
-                            class="arrow">›</span></a></li>
-            </ul>
-        </aside>
 
-    </div>
-<section class="products-cat">
-    <h2 id="Pastries"> Pastries and Croissants</h2>
-    <img src="images/ferrero-cupcake-pastries.jpg" alt="ferrero rocher cupcake" width="350" height="350">
-    <p>Ferrero rocher cupcake</p>
-    <p> Price:R50</p>
-    <img src="images/chocolate-cupcake.jpg" alt="chocolate cupcake" width="350" height="300">
-    <p>Chocolate cupcake</p>
-    <p> Price:R25</p>
-    <img src="images/ciniomon-bun-for-pastries.jpg" alt="cinnamon bun" width="350" height="300">
-    <p>Cinnamon bun</p>
-    <p> Price:R30</p>
-    <img src="images/croissant-topped-with-chocolate.jpg" alt="chocolate peanut croissants" width="350" height="300">
-    <p>Chocolate peanut croissants</p>
-    <p>Price:R32</p>
-    <img src="images/croissant-topped.jpg" alt="chocolate drizzle croissants" width="350" height="300">
-    <p>Chocolate drizzle croissants</p>
-    <p> Price:R30</p>
-    <img src="images/milk-tart-with-red-black berries.jpg" alt="berry milk tart" width="350" height="320">
-    <p>Berry milk tart</p>
-    <p>Price:R35</p>
-</section>
-<div class="menu-layout">
+    <!-- FOOTER -->
+    <footer class="bottom-button-2">
 
-        <aside class="menu-sidebar">
-            <h3><em>Categories</em></h3>
-            <ul>
-                <li><a href="#featured"><span class="icon" aria-hidden="true">⭐</span> Featured products <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Bread"><span class="icon" aria-hidden="true">🍞</span> Bread <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Pastries"><span class="icon" aria-hidden="true">🥐</span> Pastries and croissants <span
-                            class="arrow">›</span></a></li>
-                <li><a href="#Cakes"><span class="icon" aria-hidden="true">🎂</span> Cakes <span
-                            class="arrow">›</span></a></li>
-            </ul>
-        </aside>
+        <p>
+            <a href="enquiries.html">Place a Custom Order</a>
+        </p>
 
-    </div>
-<section class="products-cat">
-    <h2 id="Cakes">Cakes</h2>
-    <img src="images/flower-cake.jpg" alt=" floral celebration cake" width="350" height="300">
-    <p>Floral celebration cake</p>
-    <p>Price:R380</p>
-    <img src="images/strawberry-cake.jpg" alt="strawberry cream cake" width="350" height="300">
-    <p> Strawberry cream cake</p>
-    <p> Price:R350</p>
-    <img src="images/celebration-cake-product-3.jpg" alt="chocolate topped cake" width="350" height="300">
-    <p> Chocolate topped cake</p>
-    <p> Price:R400</p>
-    <img src="images/oreo-cake.jpg" alt=" oreo cake" width="350" height="300">
-    <p> Oreo cake</p>
-    <p> Price:R360</p>
-    <img src="images/vegan-cake.jpg" alt=" fresh fruit cake" width="350" height="300">
-    <p>Fresh fruit cake</p>
-    <p> Price:R390</p>
-    <img src="images/vanilla-cake.jpg" alt="vanilla blossom cake" width="350" height="330">
-    <p> Vanilla blossom cake</p>
-    <p> Price:R340</p>
-</section>
-<div class="buttom-button">
-<a href="#Menu">Back to top</a>
-</div>
-<footer class="buttom-button-2"> <!--link back to enquiry page for custom orders-->
-    <p><a href="enquiries.html">Custom Orders</a></p>
-</footer>
+        <p>
+            &copy; 2026 Sweet Cakes Bakery.
+            All rights reserved.
+        </p>
+
+    </footer>
+
 </body>
-
 </html>
