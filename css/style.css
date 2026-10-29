@@ -1027,3 +1027,63 @@ iframe {
     }
 
 }
+/*this is the shopping cart text and colours*/
+.shopping-cart {
+    background-color: #fff0df;
+    color: #4a3524;
+    padding: 25px;
+    margin-top: 30px;
+    border: 2px solid #d6a77a;
+    border-radius: 12px;
+}
+
+/* Shopping cart heading */
+.shopping-cart h2 {
+    color: #4a3524;
+}
+
+/* Product names and quantity information */
+.shopping-cart p,
+.shopping-cart span,
+.shopping-cart .cart-item {
+    color: #4a3524;
+}
+
+/* Individual cart products */
+.shopping-cart .cart-item {
+    background-color: #ffffff;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #d6a77a;
+}
+
+/* Cart buttons */
+.shopping-cart button {
+    background-color: #4a3524;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.shopping-cart button:hover {
+    background-color: #d6a77a;
+    color: #4a3524;
+}
+
+/* Discount information */
+#discount-message {
+    color: #287a35;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Final total */
+#cart-total {
+    color: #287a35;
+    font-weight: bold;
+}
