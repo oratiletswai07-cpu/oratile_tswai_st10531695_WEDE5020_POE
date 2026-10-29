@@ -194,36 +194,53 @@ function displayProducts() {
             filteredProducts.length + " products found";
     }
 
+    
+
     // Display products
-    filteredProducts.forEach(product => {
-
-        const productIndex = MENU.indexOf(product);
-
-        const card = document.createElement("article");
-        card.className = "product-card";
-
-        const image = document.createElement("img");
-        image.src = product.image;
-        image.alt = product.name;
-
-        const heading = document.createElement("h3");
-        heading.textContent = product.name;
-
-        const price = document.createElement("p");
-        price.textContent = "Price: R" + product.price;
-
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = "Add to Cart";
-        button.className = "add-to-cart";
-        button.dataset.index = productIndex;
-
-        card.append(image, heading, price, button);
-        productList.appendChild(card);
-    });
-
     if (filteredProducts.length === 0) {
-        productList.textContent = "No products found.";
+
+        const message = document.createElement("p");
+        message.className = "no-products-message";
+
+        if (searchText.trim() !== "") {
+            message.textContent =
+                'Sorry, "' + searchInput.value.trim() +
+                '" was not found. Please try another search.';
+        } else {
+            message.textContent =
+                "No products found in this category.";
+        }
+
+        productList.appendChild(message);
+
+    } else {
+
+        filteredProducts.forEach(product => {
+
+            const productIndex = MENU.indexOf(product);
+
+            const card = document.createElement("article");
+            card.className = "product-card";
+
+            const image = document.createElement("img");
+            image.src = product.image;
+            image.alt = product.name;
+
+            const heading = document.createElement("h3");
+            heading.textContent = product.name;
+
+            const price = document.createElement("p");
+            price.textContent = "Price: R" + product.price;
+
+            const button = document.createElement("button");
+            button.type = "button";
+            button.textContent = "Add to Cart";
+            button.className = "add-to-cart";
+            button.dataset.index = productIndex;
+
+            card.append(image, heading, price, button);
+            productList.appendChild(card);
+        });
     }
 }
 

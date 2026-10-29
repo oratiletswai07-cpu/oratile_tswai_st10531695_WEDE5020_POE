@@ -1087,3 +1087,16 @@ iframe {
     color: #287a35;
     font-weight: bold;
 }
+
+/* product not found messade*/
+.no-products-message {
+    color: #4a3524;
+    background-color: #fff0df;
+    border: 2px solid #d6a77a;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
