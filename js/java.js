@@ -166,8 +166,9 @@ function displayProducts() {
     let filteredProducts = MENU.filter(product => {
 
         const matchesCategory =
-            activeCategory === "All" ||
-            product.category === activeCategory;
+        searchText.trim() !== "" ||
+        activeCategory === "All" ||
+        product.category === activeCategory;
 
         const matchesSearch =
             product.name.toLowerCase().includes(searchText);
