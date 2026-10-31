@@ -1084,7 +1084,7 @@ iframe {
 
 /* Final total */
 #cart-total {
-    color: #287a35;
+    color: red;
     font-weight: bold;
 }
 
