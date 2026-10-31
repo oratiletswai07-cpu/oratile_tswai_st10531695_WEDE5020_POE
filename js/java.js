@@ -533,6 +533,25 @@ function setupScrollAnimations() {
     });
 }
 
+// Floating cart visibility
+function setupFloatingCart() {
+    const floatingCart = document.getElementById("floating-cart");
+    const shoppingCart = document.getElementById("shopping-cart");
+    if (!floatingCart || !shoppingCart) return;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                floatingCart.style.display = "none";
+            } else {
+                floatingCart.style.display = "flex";
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    observer.observe(shoppingCart);
+}
+
 
 
 // the copy order
