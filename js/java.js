@@ -428,6 +428,12 @@ function displayCart() {
 
     // Update cart information
     if (cartCount) cartCount.textContent = totalQuantity;
+    // Update floating cart counter
+    const floatingCartCount = document.getElementById("floating-cart-count");
+
+    if (floatingCartCount) {
+    floatingCartCount.textContent = totalQuantity;
+    }
 
     if (cartSubtotal) {
         cartSubtotal.textContent = subtotal.toFixed(2);
