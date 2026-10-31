@@ -744,4 +744,6 @@ dateMessage.textContent =
     ". Preparation time: " + daysRemaining + " days.";
     });
 }
+// Start scroll animations
+setupScrollAnimations();
 });
