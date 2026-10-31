@@ -652,7 +652,13 @@ if (enquiryMessage) {
     const savedOrder = localStorage.getItem("sweetCakesEnquiryOrder");
     if (savedOrder) {
         enquiryMessage.value = savedOrder;
+        enquiryMessage.style.height = "auto";
+        enquiryMessage.style.height = enquiryMessage.scrollHeight + "px";
         localStorage.removeItem("sweetCakesEnquiryOrder");
     }
+    enquiryMessage.addEventListener("input", function() {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+});
 }
 });

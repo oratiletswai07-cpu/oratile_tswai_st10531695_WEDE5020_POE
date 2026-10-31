@@ -340,6 +340,15 @@ input:focus, input:valid{
     font-size: 15p
 }
 
+#message {
+    width: 100%;
+    min-height: 120px;
+    height: auto;
+    resize: none;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
 /* this is css coding for the contact page*/
 .contact-card {
     display: flex;
