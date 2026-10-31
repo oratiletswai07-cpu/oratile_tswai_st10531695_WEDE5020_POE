@@ -708,11 +708,18 @@ if (collectionDate && dateMessage) {
             month: "long",
             year: "numeric"
         });
+const today = new Date();
+today.setHours(0, 0, 0, 0);
 
-        dateMessage.textContent =
-            "Your selected collection date is: " + formattedDate;
+const timeDifference = selectedDate - today;
 
+const daysRemaining = Math.ceil(
+    timeDifference / (1000 * 60 * 60 * 24)
+);
+
+dateMessage.textContent =
+    "Your selected collection date is: " + formattedDate +
+    ". Preparation time: " + daysRemaining + " days.";
     });
-
 }
 });
