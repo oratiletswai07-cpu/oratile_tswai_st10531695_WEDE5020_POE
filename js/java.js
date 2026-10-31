@@ -138,7 +138,210 @@ const MENU = [
     }
 ];
 
-
+//product ingredients
+const PRODUCT_INGREDIENTS = {
+    "Golden croissant with strawberries": [
+        "Wheat flour",
+        "Butter",
+        "Fresh strawberries",
+        "Milk",
+        "Sugar",
+        "Yeast",
+        "Salt"
+    ],
+    "Classic chocolate cake": [
+        "Wheat flour",
+        "Cocoa powder",
+        "Sugar",
+        "Eggs",
+        "Butter",
+        "Milk",
+        "Vanilla essence",
+        "Baking powder"
+    ],
+    "Chocolate topped celebration cake": [
+        "Wheat flour",
+        "Cocoa powder",
+        "Dark chocolate",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Fresh cream",
+        "Vanilla essence"
+    ],
+    "Sesame seed loaf": [
+        "Wheat flour",
+        "Sesame seeds",
+        "Yeast",
+        "Water",
+        "Sugar",
+        "Salt",
+        "Vegetable oil"
+    ],
+    "Farm white loaf": [
+        "Wheat flour",
+        "Water",
+        "Yeast",
+        "Sugar",
+        "Salt",
+        "Butter"
+    ],
+    "Gingerbread": [
+        "Wheat flour",
+        "Ground ginger",
+        "Cinnamon",
+        "Brown sugar",
+        "Butter",
+        "Eggs",
+        "Golden syrup",
+        "Baking soda"
+    ],
+    "Chocolate chip bread": [
+        "Wheat flour",
+        "Chocolate chips",
+        "Milk",
+        "Sugar",
+        "Yeast",
+        "Butter",
+        "Eggs",
+        "Salt"
+    ],
+    "Banana nut bread": [
+        "Wheat flour",
+        "Ripe bananas",
+        "Chopped walnuts",
+        "Eggs",
+        "Brown sugar",
+        "Butter",
+        "Baking powder",
+        "Cinnamon"
+    ],
+    "Bagels (pack of 4)": [
+        "Wheat flour",
+        "Yeast",
+        "Water",
+        "Sugar",
+        "Salt",
+        "Vegetable oil"
+    ],
+    "Ferrero Rocher cupcake": [
+        "Wheat flour",
+        "Cocoa powder",
+        "Hazelnuts",
+        "Chocolate",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Milk"
+    ],
+    "Chocolate cupcake": [
+        "Wheat flour",
+        "Cocoa powder",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Milk",
+        "Vanilla essence",
+        "Baking powder"
+    ],
+    "Cinnamon bun": [
+        "Wheat flour",
+        "Cinnamon",
+        "Brown sugar",
+        "Butter",
+        "Milk",
+        "Yeast",
+        "Eggs",
+        "Vanilla icing"
+    ],
+    "Chocolate peanut croissants": [
+        "Wheat flour",
+        "Butter",
+        "Chocolate",
+        "Peanuts",
+        "Milk",
+        "Sugar",
+        "Yeast",
+        "Salt"
+    ],
+    "Chocolate drizzle croissants": [
+        "Wheat flour",
+        "Butter",
+        "Milk",
+        "Dark chocolate",
+        "Sugar",
+        "Yeast",
+        "Salt"
+    ],
+    "Berry milk tart": [
+        "Wheat flour",
+        "Milk",
+        "Eggs",
+        "Sugar",
+        "Butter",
+        "Mixed berries",
+        "Vanilla essence",
+        "Cinnamon"
+    ],
+    "Floral celebration cake": [
+        "Wheat flour",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Vanilla essence",
+        "Fresh cream",
+        "Edible flower decorations",
+        "Baking powder"
+    ],
+    "Strawberry cream cake": [
+        "Wheat flour",
+        "Fresh strawberries",
+        "Fresh cream",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Vanilla essence"
+    ],
+    "Chocolate topped cake": [
+        "Wheat flour",
+        "Cocoa powder",
+        "Dark chocolate",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Fresh cream",
+        "Vanilla essence"
+    ],
+    "Oreo cake": [
+        "Wheat flour",
+        "Chocolate sandwich biscuits",
+        "Cocoa powder",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Fresh cream",
+        "Milk"
+    ],
+    "Fresh fruit cake": [
+        "Wheat flour",
+        "Fresh seasonal fruit",
+        "Plant-based milk",
+        "Vegetable oil",
+        "Sugar",
+        "Vanilla essence",
+        "Baking powder"
+    ],
+    "Vanilla blossom cake": [
+        "Wheat flour",
+        "Eggs",
+        "Butter",
+        "Sugar",
+        "Vanilla essence",
+        "Fresh cream",
+        "Edible flower decorations",
+        "Baking powder"
+    ]
+};
 
 // MENU SETTINGS
 
