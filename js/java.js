@@ -767,4 +767,6 @@ dateMessage.textContent =
 }
 // Start scroll animations
 setupScrollAnimations();
+// Start floating cart
+setupFloatingCart();
 });
