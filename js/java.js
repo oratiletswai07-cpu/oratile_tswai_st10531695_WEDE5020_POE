@@ -455,7 +455,7 @@ function displayCart() {
 
 
 
-// CHANGE PRODUCT QUANTITY
+// change product quantity 
 
 
 function changeQuantity(productIndex, amount) {
@@ -479,7 +479,7 @@ function changeQuantity(productIndex, amount) {
 
 
 
-// REMOVE PRODUCT FROM CART
+// remove product from cart
 
 function removeFromCart(productIndex) {
 
@@ -492,21 +492,19 @@ function removeFromCart(productIndex) {
 
 
 
-// CLEAR SHOPPING CART
+// clear shopping cart
 
 
 function clearCart() {
 
     cart = [];
-
+    saveCart();
     displayCart();
 }
 
 
 
-// COPY ORDER
-
-
+// the copy order
 async function copyOrder() {
 
     if (cart.length === 0) {
@@ -615,14 +613,17 @@ function setupShoppingCart() {
         });
     }
 
-    // Clear cart button
-   if (copyButton) {
+// Clear cart button
+ if (clearButton) {
+    clearButton.addEventListener("click", clearCart);
+}
+// copy order button
+if (copyButton) {
     copyButton.addEventListener("click", copyOrder);
 }
 
 // Send order to enquiry page
 const sendOrderButton = document.getElementById("send-order");
-
 if (sendOrderButton) {
     sendOrderButton.addEventListener("click", sendOrderToEnquiry);
 }
