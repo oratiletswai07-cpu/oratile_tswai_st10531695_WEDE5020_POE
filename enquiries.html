@@ -37,27 +37,27 @@
     <h1><em>Complete Sweet Cakes Enquiries and place orders</em></h1>
     </div>        
     <section class="body-3"><!--for this section im going to make the boxes bigger and center the text-->
-        <form class="form">
+        <form class="form" id="enquiry-form">
         <div class="inside">
             <div class="tins">
             <label for="first-name">First-name:</label>
-            <input type="text" id="first-name" name="first name" placeholder="Enter your first name">
+            <input type="text" id="first-name" name="first name" placeholder="Enter your first name" required>
             </div>
             <div class="tins">
             <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname" placeholder="Enter your surname">
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required   >
             </div>
             <div class="tins">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="tins">
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter your age">
+            <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120" required>
             </div>
             <div class="tins">
             <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
+            <select id="gender" name="gender" required>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
@@ -65,11 +65,11 @@
             </div>
             <div class="tins">
             <label for="message">Order:</label>
-            <textarea id="message" name="order" placeholder="Enter your order here..."></textarea>
+            <textarea id="message" name="order" placeholder="Enter your order here..." required></textarea>
             </div>
             <div class="tins">
             <label for="date">Date:</label>
-            <input type="date" id="date" name="Date">
+            <input type="date" id="date" name="Date" required>
             </div>
         
             <div class="submit-1">
