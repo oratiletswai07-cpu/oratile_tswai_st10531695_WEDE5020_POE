@@ -646,5 +646,13 @@ document.addEventListener("DOMContentLoaded", function() {
         setupShoppingCart();
 
     }
-
+    // the enquiry page
+const enquiryMessage = document.getElementById("message");
+if (enquiryMessage) {
+    const savedOrder = localStorage.getItem("sweetCakesEnquiryOrder");
+    if (savedOrder) {
+        enquiryMessage.value = savedOrder;
+        localStorage.removeItem("sweetCakesEnquiryOrder");
+    }
+}
 });
