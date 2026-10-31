@@ -504,7 +504,7 @@ function clearCart() {
 // Scroll animations
 function setupScrollAnimations() {
     const elements = document.querySelectorAll(
-        "h1, h2, h3, section, .product-card, .menu-sidebar"
+    ".body-1, .body-2, .body-3, .menu-start, .menu-sidebar, .product-card"
     );
     elements.forEach(element => {
         element.classList.add("scroll-hidden");
@@ -718,13 +718,9 @@ if (collectionDate) {
     collectionDate.min = minimumDate;
 }
 const dateMessage = document.getElementById("date-message");
-
 if (collectionDate && dateMessage) {
-
     collectionDate.addEventListener("change", function() {
-
         const selectedDate = new Date(this.value + "T00:00:00");
-
         const formattedDate = selectedDate.toLocaleDateString("en-ZA", {
             day: "numeric",
             month: "long",
@@ -732,13 +728,10 @@ if (collectionDate && dateMessage) {
         });
 const today = new Date();
 today.setHours(0, 0, 0, 0);
-
 const timeDifference = selectedDate - today;
-
 const daysRemaining = Math.ceil(
     timeDifference / (1000 * 60 * 60 * 24)
 );
-
 dateMessage.textContent =
     "Your selected collection date is: " + formattedDate +
     ". Preparation time: " + daysRemaining + " days.";

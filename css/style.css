@@ -1116,6 +1116,7 @@ iframe {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
 }
 /* Appearance when elements enter the screen */
 .scroll-show {
