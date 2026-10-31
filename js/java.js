@@ -662,4 +662,26 @@ if (enquiryMessage) {
     this.style.height = this.scrollHeight + "px";
 });
 }
+
+// Enquiry form validation and submission
+const enquiryForm = document.getElementById("enquiry-form");
+if (enquiryForm) {
+    enquiryForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const firstName = document.getElementById("first-name").value.trim();
+        const surname = document.getElementById("surname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const age = Number(document.getElementById("age").value);
+        const order = document.getElementById("message").value.trim();
+        const date = document.getElementById("date").value;
+        if (firstName === "" || surname === "" || email === "" ||
+            order === "" || date === "" || age < 1 || age > 120) {
+            alert("Please complete all fields correctly.");
+            return;
+        }
+        alert("Thank you, " + firstName +
+              "! Your enquiry has been submitted successfully.");
+        enquiryForm.reset();
+    });
+}
 });
