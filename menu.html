@@ -32,7 +32,6 @@
             </label>
 
             <ul class="navigation" id="Menu">
-
                 <li class="close-item">
                     <label for="menu-check">✕ Close</label>
                 </li>
@@ -43,7 +42,6 @@
                 <li><a href="contact.html"><span class="nav-icon">📞</span> Contact</a></li>
             </ul>
         </nav>
-
         <label for="menu-check" class="menu-overlay"></label>
     </header>
 
@@ -55,16 +53,13 @@
 
     <!-- menu heading -->
     <section class="menu-start">
-
         <h1><em>Our Menu</em></h1>
-
         <p>
             <strong>
                 Choose your sweetness and freshness!
                 Enjoy the taste of our freshly baked goods.
             </strong>
         </p>
-
     </section>
     
 <!-- Main menu layout -->
@@ -89,7 +84,6 @@
         <div class="menu-controls">
             <input type="text" id="menu-search"
                    placeholder="Search for a product...">
-
             <select id="menu-sort">
                 <option value="default">Default order</option>
                 <option value="low-high">Price: Low to High</option>
@@ -106,20 +100,15 @@
         <!-- Shopping cart -->
         <section class="shopping-cart" id ="shopping-cart">
             <h2>Your Shopping Cart</h2>
-
             <p>Items in cart: <span id="cart-count">0</span></p>
-
             <div id="cart-items">
                 Your cart is empty.
             </div>
-
             <p>Subtotal: R<span id="cart-subtotal">0.00</span></p>
             <p>Discount: R<span id="cart-discount">0.00</span></p>
-
             <p>
                 <strong>Total: R<span id="cart-total">0.00</span></strong>
             </p>
-
             <p id="discount-message"></p>
 
         <button type="button" id="copy-cart">Copy Order</button>
@@ -131,27 +120,34 @@
 
 </main>
 
+    <div class="close-lightbox">&times;</button>
+
+        <!-- Product image -->
+        <img id="lightbox-image" src="" alt="">
+        <!-- Product information -->
+        <div class="lightbox-details">
+            <h2 id="lightbox-name"></h2>
+            <p id="lightbox-price"></p>
+            <h3>Ingredients</h3>
+            <ul id="lightbox-ingredients"></ul>
+        </div>
+    </div>
+</div>
 
     <!-- back to top button  -->
     <div class="bottom-button">
-
         <a href="#top">Back to top ↑</a>
-
     </div>
-
 
     <!-- footer -->
     <footer class="bottom-button-2">
-
         <p>
             <a href="enquiries.html">Place a Custom Order</a>
         </p>
-
         <p>
             &copy; 2026 Sweet Cakes Bakery.
             All rights reserved.
         </p>
-
     </footer>
 
 </body>
