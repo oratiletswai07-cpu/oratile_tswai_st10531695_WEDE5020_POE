@@ -553,11 +553,49 @@ async function copyOrder() {
     }
 }
 
+// Send shopping cart order to the enquiry page
+function sendOrderToEnquiry() {
+
+    if (cart.length === 0) {
+        alert("Your shopping cart is empty. Please add products first.");
+        return;
+    }
+
+    let orderDetails = "MY SWEET CAKES BAKERY ORDER\n\n";
+
+    let subtotal = 0;
+    let totalQuantity = 0;
+
+    cart.forEach(item => {
+
+        const product = MENU[item.index];
+
+        const itemTotal = product.price * item.quantity;
+
+        subtotal += itemTotal;
+        totalQuantity += item.quantity;
+
+        orderDetails +=
+            product.name +
+            " x " + item.quantity +
+            " = R" + itemTotal.toFixed(2) + "\n";
+    });
+
+    const discount = totalQuantity >= 10 ? subtotal * 0.10 : 0;
+    const total = subtotal - discount;
+
+    orderDetails += "\nSubtotal: R" + subtotal.toFixed(2);
+    orderDetails += "\nDiscount: R" + discount.toFixed(2);
+    orderDetails += "\nTotal: R" + total.toFixed(2);
+
+    localStorage.setItem("sweetCakesEnquiryOrder", orderDetails);
+
+    window.location.href = "enquiries.html";
+}
 
 
-// CONNECT BUTTONS
 
-
+// Connect buttons
 function setupShoppingCart() {
 
     const productList = document.getElementById("menu-list");
@@ -570,27 +608,26 @@ function setupShoppingCart() {
         productList.addEventListener("click", function(event) {
 
             const button = event.target.closest(".add-to-cart");
-
             if (!button) return;
-
             const productIndex = Number(button.dataset.index);
-
             addToCart(productIndex);
 
         });
     }
 
     // Clear cart button
-    if (clearButton) {
-        clearButton.addEventListener("click", clearCart);
-    }
+   if (copyButton) {
+    copyButton.addEventListener("click", copyOrder);
+}
 
-    // Copy order button
-    if (copyButton) {
-        copyButton.addEventListener("click", copyOrder);
-    }
+// Send order to enquiry page
+const sendOrderButton = document.getElementById("send-order");
 
-    displayCart();
+if (sendOrderButton) {
+    sendOrderButton.addEventListener("click", sendOrderToEnquiry);
+}
+
+displayCart();
 }
 
 
