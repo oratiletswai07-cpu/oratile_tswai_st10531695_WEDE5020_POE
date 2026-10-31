@@ -501,6 +501,28 @@ function clearCart() {
     saveCart();
     displayCart();
 }
+// Scroll animations
+function setupScrollAnimations() {
+    const elements = document.querySelectorAll(
+        "h1, h2, h3, section, .product-card, .menu-sidebar"
+    );
+    elements.forEach(element => {
+        element.classList.add("scroll-hidden");
+    });
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("scroll-show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+}
 
 
 
