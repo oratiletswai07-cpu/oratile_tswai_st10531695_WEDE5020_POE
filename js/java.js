@@ -681,7 +681,18 @@ if (enquiryForm) {
         }
         alert("Thank you, " + firstName +
               "! Your enquiry has been submitted successfully.");
-        enquiryForm.reset();
+        enquiryForm.reset();   
     });
+}
+// Bakery order preparation dates
+const collectionDate = document.getElementById("date");
+if (collectionDate) {
+    const today = new Date();
+    // Add 2 days for preparation
+    today.setDate(today.getDate() + 2);
+    // Format date as YYYY-MM-DD
+    const minimumDate = today.toISOString().split("T")[0];
+    // Prevent customers from selecting earlier dates
+    collectionDate.min = minimumDate;
 }
 });
