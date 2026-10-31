@@ -695,4 +695,24 @@ if (collectionDate) {
     // Prevent customers from selecting earlier dates
     collectionDate.min = minimumDate;
 }
+const dateMessage = document.getElementById("date-message");
+
+if (collectionDate && dateMessage) {
+
+    collectionDate.addEventListener("change", function() {
+
+        const selectedDate = new Date(this.value + "T00:00:00");
+
+        const formattedDate = selectedDate.toLocaleDateString("en-ZA", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+
+        dateMessage.textContent =
+            "Your selected collection date is: " + formattedDate;
+
+    });
+
+}
 });
