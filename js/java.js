@@ -504,7 +504,10 @@ function clearCart() {
 // Scroll animations
 function setupScrollAnimations() {
     const elements = document.querySelectorAll(
-    ".body-1, .body-2, .body-3, .menu-start, .menu-sidebar, .product-card"
+    ".box-1, .box-2, .box-3, .featured-products, " +
+    ".container-1, .container-2, .container, " +
+    ".contact-heading, .contact-card, .map, " +
+    ".menu-start, .menu-sidebar, .product-card"
     );
     elements.forEach(element => {
         element.classList.add("scroll-hidden");
