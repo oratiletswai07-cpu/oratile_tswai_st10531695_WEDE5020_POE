@@ -127,6 +127,7 @@ nav {
     color: inherit;
 }
 .product img {
+    height: 65%;
     width: 100%;
     border-radius: 8px;
     border:2px solid #DCC49E;
@@ -1108,4 +1109,16 @@ iframe {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+}
+/*scroll animations*/
+/* Initial appearance of elements */
+.scroll-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+/* Appearance when elements enter the screen */
+.scroll-show {
+    opacity: 1;
+    transform: translateY(0);
 }
