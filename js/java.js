@@ -1230,3 +1230,48 @@ async function processEnquiry(form) {
     button.disabled = false;
     box.scrollIntoView({ behavior: "smooth", block: "center" });
 }
+
+//contact form (validation and email)
+function setupContactForm() {
+    const form = document.getElementById("contact-form");
+    if (!form) return;
+ 
+    const rules = {
+        "contact-name":    v => NAME_PATTERN.test(v) || "Enter your name (letters only, 2 to 30 characters).",
+        "contact-email":   v => EMAIL_PATTERN.test(v) || "Enter a valid email, like name@example.com.",
+        "contact-phone":   v => v === "" || PHONE_PATTERN.test(v.replace(/\s/g, "")) || "Enter a South African number, like 072 123 4567 (or leave it empty).",
+        "contact-type":    v => v !== "" || "Please choose the type of message.",
+        "contact-message": v => (v.length >= 10 && v.length <= 500) || "Your message must be between 10 and 500 characters."
+    };
+ 
+    setupForm(form, rules, () => {
+        const name  = form.querySelector("#contact-name").value.trim();
+        const email = form.querySelector("#contact-email").value.trim();
+        const phone = form.querySelector("#contact-phone").value.trim();
+        const type  = form.querySelector("#contact-type").value;
+        const text  = form.querySelector("#contact-message").value.trim();
+ 
+        const subject = type + " from " + name;
+        const body =
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Phone: " + (phone || "not given") + "\n" +
+            "Type of message: " + type + "\n\n" +
+            text;
+ 
+        // show the finished email on the page
+        document.getElementById("preview-to").textContent = CONTACT_EMAIL;
+        document.getElementById("preview-subject").textContent = subject;
+        document.getElementById("preview-body").textContent = body;
+ 
+        // the Send button opens the customer's email app, already filled in
+        document.getElementById("send-email").href =
+            "mailto:" + CONTACT_EMAIL +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
+ 
+        const preview = document.getElementById("email-preview");
+        preview.hidden = false;
+        preview.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+}
