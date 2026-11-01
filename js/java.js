@@ -919,6 +919,32 @@ function setupProductLightbox() {
             item.textContent = ingredient;
             lightboxIngredients.appendChild(item);
         });
+        
+        // Display allergen information
+    lightboxAllergens.innerHTML = "";
+    const commonAllergens = [
+        "Wheat",
+        "Milk",
+        "Eggs",
+        "Peanuts",
+        "Hazelnuts",
+        "Walnuts",
+        "Sesame"
+    ];
+    const detectedAllergens = ingredients.filter(function(ingredient) {
+        return commonAllergens.some(function(allergen) {
+            return ingredient.toLowerCase().includes(allergen.toLowerCase());
+        });
+    });
+    if (detectedAllergens.length > 0) {
+        detectedAllergens.forEach(function(allergen) {
+            const item = document.createElement("li");
+            item.textContent = allergen;
+            lightboxAllergens.appendChild(item);
+        });
+    } else {
+        lightboxAllergens.innerHTML = "<li>No common allergens identified in the listed ingredients.</li>";
+    }
         lightbox.style.display = "flex";
     });
 
