@@ -922,20 +922,7 @@ function setupProductLightbox() {
         
         // Display allergen information
     lightboxAllergens.innerHTML = "";
-    const commonAllergens = [
-        "Wheat",
-        "Milk",
-        "Eggs",
-        "Peanuts",
-        "Hazelnuts",
-        "Walnuts",
-        "Sesame"
-    ];
-    const detectedAllergens = ingredients.filter(function(ingredient) {
-        return commonAllergens.some(function(allergen) {
-            return ingredient.toLowerCase().includes(allergen.toLowerCase());
-        });
-    });
+    const detectedAllergens = findAllergens(ingredients);
     if (detectedAllergens.length > 0) {
         detectedAllergens.forEach(function(allergen) {
             const item = document.createElement("li");
@@ -1279,4 +1266,24 @@ function setupContactForm() {
         preview.scrollIntoView({ behavior: "smooth", block: "center" });
     });
 }
+ const ALLERGEN_KEYWORDS = {
+    "Wheat (gluten)": ["wheat", "flour", "biscuit"],
+    "Milk":           ["milk", "butter", "cream", "chocolate", "icing"],
+    "Eggs":           ["egg"],
+    "Peanuts":        ["peanut"],
+    "Tree nuts":      ["hazelnut", "walnut", "almond"],
+    "Sesame":         ["sesame"]
+};
  
+function findAllergens(ingredients) {
+    const found = [];
+    Object.keys(ALLERGEN_KEYWORDS).forEach(allergen => {
+        const hit = ingredients.some(ingredient => {
+            const text = ingredient.toLowerCase();
+            if (allergen === "Milk" && text.includes("plant-based")) return false;
+            return ALLERGEN_KEYWORDS[allergen].some(word => text.includes(word));
+        });
+        if (hit) found.push(allergen);
+    });
+    return found;
+}
