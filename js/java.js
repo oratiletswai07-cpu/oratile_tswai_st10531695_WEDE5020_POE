@@ -962,16 +962,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Menu page
     if (document.getElementById("menu-list")) {
-
         displayProducts();
         setupCategories();
         setupSearchAndSort();
         setupShoppingCart();
         setupProductLightbox();
-        setupMap();
-        setupAccordion();
-        setupEnquiryValidation();
-        setupContactForm();
     }
     // the enquiry page
 const enquiryMessage = document.getElementById("message");
@@ -1024,6 +1019,13 @@ dateMessage.textContent =
 setupScrollAnimations();
 // Start floating cart
 setupFloatingCart();
+
+ // Map, FAQ and forms (these run on every page, and each one
+    // checks that its own element exists before doing anything)
+    setupMap();
+    setupAccordion();
+    setupEnquiryValidation();
+    setupContactForm();
 });
 
 // shared validations and helpers
