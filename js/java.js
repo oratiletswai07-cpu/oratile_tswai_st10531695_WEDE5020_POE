@@ -981,6 +981,10 @@ document.addEventListener("DOMContentLoaded", function() {
         setupSearchAndSort();
         setupShoppingCart();
         setupProductLightbox();
+        setupMap();
+        setupAccordion();
+        setupEnquiryValidation();
+        setupContactForm();
     }
     // the enquiry page
 const enquiryMessage = document.getElementById("message");
@@ -1275,3 +1279,4 @@ function setupContactForm() {
         preview.scrollIntoView({ behavior: "smooth", block: "center" });
     });
 }
+ 
