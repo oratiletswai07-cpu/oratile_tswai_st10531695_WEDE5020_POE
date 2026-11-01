@@ -884,7 +884,62 @@ if (sendOrderButton) {
 displayCart();
 }
 
+//prodcut details for lightbox
+function setupProductLightbox() {
+    const productList = document.getElementById("menu-list");
+    const lightbox = document.getElementById("product-lightbox");
+    const closeButton = document.getElementById("close-lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxName = document.getElementById("lightbox-name");
+    const lightboxPrice = document.getElementById("lightbox-price");
+    const lightboxIngredients = document.getElementById("lightbox-ingredients");
+    if (!productList || !lightbox || !closeButton) return;
 
+    // Open lightbox when a product image is clicked
+    productList.addEventListener("click", function(event) {
+        const image = event.target.closest(".product-card img");
+        if (!image) return;
+        const card = image.closest(".product-card");
+        const button = card.querySelector(".add-to-cart");
+        if (!button) return;
+        const productIndex = Number(button.dataset.index);
+        const product = MENU[productIndex];
+        if (!product) return;
+        lightboxImage.src = product.image;
+        lightboxImage.alt = product.name;
+        lightboxName.textContent = product.name;
+        lightboxPrice.textContent = "Price: R" + product.price;
+
+        // Display product ingredients
+        lightboxIngredients.innerHTML = "";
+        const ingredients = PRODUCT_INGREDIENTS[product.name] || [];
+        ingredients.forEach(function(ingredient) {
+            const item = document.createElement("li");
+            item.textContent = ingredient;
+            lightboxIngredients.appendChild(item);
+        });
+        lightbox.style.display = "flex";
+    });
+
+    // Close using the X button
+    closeButton.addEventListener("click", function() {
+        lightbox.style.display = "none";
+    });
+
+    // Close when clicking outside the content
+    lightbox.addEventListener("click", function(event) {
+        if (event.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+
+    // Close using the Escape key
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            lightbox.style.display = "none";
+        }
+    });
+}
 
 // START THE WEBSITE FEATURES
 
