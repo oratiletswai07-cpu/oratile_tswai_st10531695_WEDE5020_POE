@@ -1062,5 +1062,15 @@ const NAME_PATTERN  = /^[A-Za-z\u00C0-\u00FF' -]{2,30}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_PATTERN = /^(\+27|0)[0-9]{9}$/;     // 0721234567 or +27721234567
 
-
+function escapeHtml(text) {
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
+}
+ 
+function prettyDate(d) {
+    return d.toLocaleDateString("en-ZA", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+    });
+}
 
