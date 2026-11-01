@@ -1061,16 +1061,73 @@ const CONTACT_EMAIL = "info@sweetcakesbakery.co.za";   // change if needed
 const NAME_PATTERN  = /^[A-Za-z\u00C0-\u00FF' -]{2,30}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_PATTERN = /^(\+27|0)[0-9]{9}$/;     // 0721234567 or +27721234567
-
+// Escape HTML to prevent XSS attacks
 function escapeHtml(text) {
     const div = document.createElement("div");
     div.textContent = text;
     return div.innerHTML;
 }
- 
 function prettyDate(d) {
     return d.toLocaleDateString("en-ZA", {
         weekday: "long", day: "numeric", month: "long", year: "numeric"
     });
 }
 
+// form validation and submission
+function setupForm(form, rules, onValid) {
+    const fields = Array.from(form.querySelectorAll("input, select, textarea"))
+        .filter(field => rules[field.id]);
+    function check(field) {
+        const result = rules[field.id](field.value.trim());
+        const errorSpan = document.getElementById(field.id + "-error");
+        if (result !== true) {
+            errorSpan.textContent = result;
+            field.classList.add("invalid");
+            return false;
+        }
+        errorSpan.textContent = "";
+        field.classList.remove("invalid");
+        return true;
+    }
+    fields.forEach(field => {
+        field.addEventListener("blur", () => check(field));
+        field.addEventListener("input", () => {
+            if (field.classList.contains("invalid")) check(field);
+        });
+    });
+    form.addEventListener("submit", event => {
+        event.preventDefault();                  // stop the page reloading
+        const results = fields.map(check);       // checks every field so all errors show
+        if (results.every(Boolean)) {
+            onValid();
+        } else {
+            fields[results.indexOf(false)].focus();
+        }
+    });
+}
+
+// interactive leaflet map for contact page and accordion
+function setupMap() {
+    const mapDiv = document.getElementById("map");
+    if (!mapDiv || typeof L === "undefined") return;
+    const map = L.map("map").setView([-25.98, 28.15], 9);   // shows both cities
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+    L.marker([-25.7479, 28.2293]).addTo(map)
+        .bindPopup("<strong>Sweet Cakes Bakery - Pretoria</strong><br>123 Bakery Street, Pretoria");
+ 
+    L.marker([-26.2041, 28.0473]).addTo(map)
+        .bindPopup("<strong>Sweet Cakes Bakery - Johannesburg</strong><br>456 Sweet Avenue, Johannesburg");
+}
+function setupAccordion() {
+    document.querySelectorAll(".accordion-header").forEach(button => {
+        button.addEventListener("click", () => {
+            const panel = button.nextElementSibling;
+            const isOpen = button.classList.toggle("active");
+            button.setAttribute("aria-expanded", isOpen);
+            panel.style.maxHeight = isOpen ? panel.scrollHeight + "px" : null;
+        });
+    });
+}
