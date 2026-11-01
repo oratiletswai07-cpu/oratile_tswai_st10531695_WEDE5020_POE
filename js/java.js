@@ -953,7 +953,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setupCategories();
         setupSearchAndSort();
         setupShoppingCart();
-
+        setupProductLightbox();
     }
     // the enquiry page
 const enquiryMessage = document.getElementById("message");
