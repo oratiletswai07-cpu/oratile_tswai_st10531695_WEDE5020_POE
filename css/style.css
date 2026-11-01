@@ -1216,3 +1216,114 @@ iframe {
         max-height: 250px;
     }
 }
+
+/* lets the "hidden" attribute work even on styled boxes */
+[hidden] { display: none !important; }
+ 
+/* ---------- form errors ---------- */
+.error {
+    display: block;
+    color: #b00020;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 18px;
+    margin-top: 4px;
+}
+.inside .tins input.invalid,
+.inside .tins select.invalid,
+.inside .tins textarea.invalid,
+.contact-form .invalid {
+    border: 2px solid #b00020 !important;
+}
+ 
+/* enquiry form: dropdown + order box */
+.inside .tins select {
+    height: 45px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #4A3524;
+    padding-left: 10px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    background: white;
+}
+ 
+/* ---------- response boxes (enquiry answer + email preview) ---------- */
+.response-box {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 25px 30px;
+    background: #fff0df;
+    color: #4A3524;
+    border: 2px solid #d6a77a;
+    border-radius: 12px;
+}
+.response-box ul { margin: 10px 0 10px 20px; }
+.response-box pre {
+    white-space: pre-wrap;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0 15px;
+    font-family: inherit;
+}
+.send-status { font-weight: bold; margin-top: 12px; color: #287a35; }
+ 
+/* ---------- contact form select ---------- */
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+}
+ 
+/* ---------- Leaflet map ---------- */
+#map {
+    height: 450px;
+    max-width: 1100px;
+    margin: 15px auto 40px;
+    border: 3px solid white;
+    border-radius: 10px;
+    z-index: 1;
+}
+ 
+/* ---------- accordion (FAQ) ---------- */
+.faq {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 10px;
+    color: #4A3524;
+}
+.faq h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 4px 3px 0px #4A3524;
+    color: #FFFF99;
+    font-size: 35px;
+}
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background: #4A3524;
+    color: #FFFF99;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 15px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.accordion-header::after { content: "+"; float: right; font-size: 22px; }
+.accordion-header.active::after { content: "\2212"; }
+.accordion-header:hover { background: #6b523b; }
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff0df;
+    transition: max-height 0.35s ease;
+}
+.accordion-panel p { padding: 15px 20px; }
