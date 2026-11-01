@@ -998,27 +998,6 @@ if (enquiryMessage) {
 });
 }
 
-// Enquiry form validation and submission
-const enquiryForm = document.getElementById("enquiry-form");
-if (enquiryForm) {
-    enquiryForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const firstName = document.getElementById("first-name").value.trim();
-        const surname = document.getElementById("surname").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const age = Number(document.getElementById("age").value);
-        const order = document.getElementById("message").value.trim();
-        const date = document.getElementById("date").value;
-        if (firstName === "" || surname === "" || email === "" ||
-            order === "" || date === "" || age < 1 || age > 120) {
-            alert("Please complete all fields correctly.");
-            return;
-        }
-        alert("Thank you, " + firstName +
-              "! Your enquiry has been submitted successfully.");
-        enquiryForm.reset();   
-    });
-}
 // Bakery order preparation dates
 const collectionDate = document.getElementById("date");
 if (collectionDate) {
@@ -1130,4 +1109,124 @@ function setupAccordion() {
             panel.style.maxHeight = isOpen ? panel.scrollHeight + "px" : null;
         });
     });
+}
+
+// this is for the enquiry page (replacement for the old block of code)
+function setupEnquiryValidation() {
+    const form = document.getElementById("enquiry-form");
+    if (!form) return;
+ 
+    const rules = {
+        "first-name": v => NAME_PATTERN.test(v) || "Enter a valid first name (letters only, 2 to 30 characters).",
+        "surname":    v => NAME_PATTERN.test(v) || "Enter a valid surname (letters only, 2 to 30 characters).",
+        "email":      v => EMAIL_PATTERN.test(v) || "Enter a valid email, like name@example.com.",
+        "phone":      v => PHONE_PATTERN.test(v.replace(/\s/g, "")) || "Enter a South African number, like 072 123 4567 or +27 72 123 4567.",
+        "age":        v => (Number.isInteger(Number(v)) && Number(v) >= 1 && Number(v) <= 120) || "Age must be a whole number from 1 to 120.",
+        "gender":     v => v !== "" || "Please choose an option.",
+        "message":    v => (v.length >= 5 && v.length <= 1000) || "Your order must be between 5 and 1000 characters.",
+        "date":       v => {
+            if (!v) return "Please choose your collection date.";
+            const chosen = new Date(v + "T00:00:00");
+            const earliest = new Date();
+            earliest.setHours(0, 0, 0, 0);
+            earliest.setDate(earliest.getDate() + 2);          // 2 days to prepare
+            return chosen >= earliest || "Please choose a date at least 2 days from today.";
+        }
+    };
+ 
+    setupForm(form, rules, () => processEnquiry(form));
+}
+ 
+async function processEnquiry(form) {
+    const box = document.getElementById("enquiry-response");
+    const button = form.querySelector("button[type='submit']");
+ 
+    const first = form.querySelector("#first-name").value.trim();
+    const wanted = new Date(form.querySelector("#date").value + "T00:00:00");
+ 
+    // --- COST: read the cart that was saved on the menu page ---
+    let savedCart = [];
+    try {
+        savedCart = JSON.parse(localStorage.getItem("sweetCakesCart")) || [];
+    } catch (error) {
+        savedCart = [];
+    }
+ 
+    let lines = "";
+    let subtotal = 0;
+    let totalQuantity = 0;
+ 
+    savedCart.forEach(item => {
+        const product = MENU[item.index];
+        if (!product) return;
+        const lineTotal = product.price * item.quantity;
+        subtotal += lineTotal;
+        totalQuantity += item.quantity;
+        lines += "<li>" + escapeHtml(product.name) + " x " + item.quantity +
+                 " = R" + lineTotal.toFixed(2) + "</li>";
+    });
+ 
+    const discount = totalQuantity >= 10 ? subtotal * 0.10 : 0;
+    const total = subtotal - discount;
+ 
+    let costHtml;
+    if (totalQuantity > 0) {
+        costHtml =
+            "<ul>" + lines + "</ul>" +
+            "<p><strong>Subtotal:</strong> R" + subtotal.toFixed(2) + "</p>" +
+            (discount > 0 ? "<p><strong>10% bulk discount:</strong> -R" + discount.toFixed(2) + "</p>" : "") +
+            "<p><strong>Total cost:</strong> R" + total.toFixed(2) + "</p>";
+    } else {
+        costHtml = "<p><strong>Cost:</strong> This is a custom order, so we will send you a quote within 24 hours.</p>";
+    }
+ 
+    // --- AVAILABILITY ---
+    const sundayNote = wanted.getDay() === 0
+        ? " Please collect before 14:00, because we close early on Sundays."
+        : "";
+    const availabilityHtml =
+        "<p><strong>Availability:</strong> Yes, we can have your order ready for " +
+        prettyDate(wanted) + "." + sundayNote + "</p>";
+ 
+    // --- AJAX: send the data in the background (no page reload) ---
+    box.hidden = false;
+    box.innerHTML = "<p>Sending your enquiry...</p>";
+    button.disabled = true;
+ 
+    const data = {
+        firstName: first,
+        surname: form.querySelector("#surname").value.trim(),
+        email: form.querySelector("#email").value.trim(),
+        phone: form.querySelector("#phone").value.trim(),
+        order: form.querySelector("#message").value.trim(),
+        collectionDate: form.querySelector("#date").value
+    };
+ 
+    let statusText;
+    let sentOk = false;
+    try {
+        // jsonplaceholder is a free TEST server that answers like a real one.
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+        if (!response.ok) throw new Error("Server said no");
+        sentOk = true;
+        statusText = "Your enquiry was sent successfully. We will contact you soon.";
+    } catch (error) {
+        statusText = "We could not send your enquiry right now. Please check your internet and try again.";
+    }
+ 
+    box.innerHTML =
+        "<h3>Thank you, " + escapeHtml(first) + "!</h3>" +
+        costHtml + availabilityHtml +
+        '<p class="send-status">' + statusText + "</p>";
+ 
+    if (sentOk) {
+        localStorage.removeItem("sweetCakesCart");   // the order has been placed
+        form.reset();
+    }
+    button.disabled = false;
+    box.scrollIntoView({ behavior: "smooth", block: "center" });
 }
