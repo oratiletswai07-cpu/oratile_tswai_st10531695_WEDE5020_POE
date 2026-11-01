@@ -1055,3 +1055,12 @@ setupScrollAnimations();
 // Start floating cart
 setupFloatingCart();
 });
+
+// shared validations and helpers
+const CONTACT_EMAIL = "info@sweetcakesbakery.co.za";   // change if needed 
+const NAME_PATTERN  = /^[A-Za-z\u00C0-\u00FF' -]{2,30}$/;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_PATTERN = /^(\+27|0)[0-9]{9}$/;     // 0721234567 or +27721234567
+
+
+
