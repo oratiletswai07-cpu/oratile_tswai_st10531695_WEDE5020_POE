@@ -893,6 +893,7 @@ function setupProductLightbox() {
     const lightboxName = document.getElementById("lightbox-name");
     const lightboxPrice = document.getElementById("lightbox-price");
     const lightboxIngredients = document.getElementById("lightbox-ingredients");
+    const lightboxAllergens = document.getElementById("lightbox-allergens");
     if (!productList || !lightbox || !closeButton) return;
 
     // Open lightbox when a product image is clicked
