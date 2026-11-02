@@ -336,7 +336,7 @@ input:focus, input:valid{
     border-radius: 5px;
     cursor: pointer; 
     font-weight: bold;
-    font-size: 15p
+    font-size: 15px
 }
 
 #message {
@@ -1527,4 +1527,16 @@ iframe {
     font-size: 13px;
     font-weight: bold;
     margin-top: 8px;
+}
+#email-preview {
+    grid-column: 1 / -1; 
+}
+
+@media (max-width: 768px) {
+    .contact-card { 
+        grid-template-columns: 1fr; padding: 20px; 
+    }
+    .contact-info { 
+        border-right: none; padding-right: 0; 
+    }
 }
