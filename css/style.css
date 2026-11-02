@@ -262,9 +262,7 @@ nav {
     margin: 10px 15px;
     text-align: center; 
 }
-
 /* this is css coding for the enquiries page*/
-
 .tin-1 { 
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/introduction-image.jpg");
     background-size: cover;
@@ -426,7 +424,6 @@ iframe {
     color: #FFFF99;
 }
 /*the menu page */
-
 .menu-start {
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/history-picture.jpg");
     background-size: cover;
@@ -436,7 +433,6 @@ iframe {
     padding: 300px;
     height: 200px;
 }  
-
 .menu-start h1{
     text-align: center;
     font-size: 6vw;
@@ -450,7 +446,6 @@ iframe {
     text-shadow: 4px 3px 0px #4A3524;
     color: #FFFF99;
 }
-
 /*css sidebar*/
 .menu-check {
     display: none;
@@ -548,12 +543,10 @@ iframe {
         flex-direction: column;
         text-align: center;
     }
-
     body .container img {
         width: 100%;
         max-width: 400px;
     }
-
     body .container .text {
         width: 100%;
     }
@@ -573,7 +566,6 @@ iframe {
         z-index: 800;      
         cursor: pointer;
     }
-
     .logo-label .logo {
         width: 70px;
         height: 70px;
@@ -733,37 +725,28 @@ iframe {
 .menu-sidebar {
     width: 220px;
     flex-shrink: 0;
-
     background-color: rgb(202, 173, 11);
     color: white;
-
     border-radius: 8px;
     overflow: hidden;
-
     position: sticky;
     top: 20px;
 }
-
 .menu-sidebar h3 {
     text-align: center;
     padding: 20px 10px;
-
     margin: 0;
-
     background-color: #d6a77a;
     color: #3b281b;
 }
-
 .menu-sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .menu-sidebar li {
     border-bottom: 1px solid #8a725d;
 }
-
 .menu-sidebar a {
     display: block;
     padding: 25px 15px;
@@ -773,13 +756,11 @@ iframe {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .menu-sidebar a:hover {
     background-color: #d6a77a;
     color: #3b281b;
     padding-left: 22px;
 }
-
 
 /* product content */
 
@@ -1220,7 +1201,7 @@ iframe {
 /* lets the "hidden" attribute work even on styled boxes */
 [hidden] { display: none !important; }
  
-/* ---------- form errors ---------- */
+/* form errors  */
 .error {
     display: block;
     color: #b00020;
@@ -1248,7 +1229,7 @@ iframe {
     background: white;
 }
  
-/* ---------- response boxes (enquiry answer + email preview) ---------- */
+/* response boxes (enquiry answer + email preview) */
 .response-box {
     max-width: 700px;
     margin: 25px auto;
@@ -1269,7 +1250,7 @@ iframe {
 }
 .send-status { font-weight: bold; margin-top: 12px; color: #287a35; }
  
-/* ---------- contact form select ---------- */
+/* contact form select */
 .contact-form select {
     width: 100%;
     padding: 12px;
@@ -1280,7 +1261,7 @@ iframe {
     background: white;
 }
  
-/* ---------- Leaflet map ---------- */
+/* Leaflet map */
 #map {
     height: 450px;
     width: 100%;
@@ -1290,7 +1271,7 @@ iframe {
     border-radius: 10px;
 }
  
-/* ---------- accordion (FAQ) ---------- */
+/*  accordion (FAQ)  */
 .faq {
     max-width: 700px;
     margin: 40px auto;
@@ -1356,4 +1337,89 @@ iframe {
 .map-buttons button:focus-visible {
     outline: 3px solid #D6A77A;
     outline-offset: 3px;
+}
+
+/*contact page css code*/
+.contact-heading {
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    color: #FFFF99;
+    text-shadow: 3px 3px 0px #4A3524;
+}
+.contact-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 35px;
+    background-color: gold;
+    border: 2px solid #D6A77A;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(74, 53, 36, 0.15);
+}
+/*contact form styling*/
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    background-color: #FFFFFF;
+    border: 2px solid #D6A77A;
+    border-radius: 12px;
+}
+#contact-form label {
+    color: #4A3524;
+    font-weight: bold;
+    margin-top: 8px;
+}
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D6A77A;
+    border-radius: 7px;
+    background-color: #FFF9F2;
+    color: #4A3524;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+#contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+/* Highlight fields when selected */
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border: 2px solid #4A3524;
+    background-color: #FFFFFF;
+}
+/* Submit button styling */
+#contact-form button {
+    background-color: #4A3524;
+    color: #FFF0DF;
+    border: 2px solid #D6A77A;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+#contact-form button:hover {
+    background-color: #D6A77A;
+    color: #4A3524;
+    transform: translateY(-2px);
+}
+/* Contact form error messages */
+#contact-form .error {
+    color: #B22222;
+    font-size: 13px;
+    font-weight: bold;
 }
