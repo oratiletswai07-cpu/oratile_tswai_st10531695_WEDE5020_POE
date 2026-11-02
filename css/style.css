@@ -1326,4 +1326,34 @@ iframe {
     background: #fff0df;
     transition: max-height 0.35s ease;
 }
-.accordion-panel p { padding: 15px 20px; }
+.accordion-panel p {
+    padding: 15px 20px; 
+}
+
+/* css code buttons for the map */
+.map-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px auto;
+}
+.map-buttons button {
+    background-color: #4A3524;
+    color: #FFF0DF;
+    border: 2px solid #D6A77A;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.map-buttons button:hover {
+    background-color: #D6A77A;
+    color: #4A3524;
+    transform: translateY(-2px);
+}
+.map-buttons button:focus-visible {
+    outline: 3px solid #D6A77A;
+    outline-offset: 3px;
+}
