@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="css/style.css">
       <script src="js/java.js" defer></script>
+      <meta name="description" content="Place orders and make enquiries at Sweet Cakes Bakery. Freshly baked bread, pastries, and custom cakes daily.">
     <title>Enquiries - Sweet Cakes Bakery</title>
 </head>
 
@@ -37,51 +38,82 @@
     <h1><em>Complete Sweet Cakes Enquiries and place orders</em></h1>
     </div>        
     <section class="body-3"><!--for this section im going to make the boxes bigger and center the text-->
-        <form class="form" id="enquiry-form">
-        <div class="inside">
-            <div class="tins">
-            <label for="first-name">First-name:</label>
-            <input type="text" id="first-name" name="first name" placeholder="Enter your first name" required>
-            </div>
-            <div class="tins">
+        <form class="form" id="enquiry-form" novalidate>
+    <div class="inside">
+        <div class="tins">
+            <label for="first-name">First name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+            <span class="error" id="first-name-error"></span>
+        </div>
+        <div class="tins">
             <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required   >
-            </div>
-            <div class="tins">
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname">
+            <span class="error" id="surname-error"></span>
+        </div>
+        <div class="tins">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="tins">
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <span class="error" id="email-error"></span>
+        </div>
+        <div class="tins">
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="072 123 4567">
+            <span class="error" id="phone-error"></span>
+        </div>
+        <div class="tins">
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120" required>
-            </div>
-            <div class="tins">
+            <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120">
+            <span class="error" id="age-error"></span>
+        </div>
+        <div class="tins">
             <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
+            <select id="gender" name="gender">
+                <option value="">Choose one...</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
+                <option value="prefer-not">Prefer not to say</option>
             </select>
-            </div>
-            <div class="tins">
-            <label for="message">Order:</label>
-            <textarea id="message" name="order" placeholder="Enter your order here..." required></textarea>
-            </div>
-            <div class="tins">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="Date" required>
-            <p id="date-message">
-                please place your order at least 2 days before the date you want to collect it.
-            </p>
-            </div>
-        
-            <div class="submit-1">
-            <button type="submit">Submit</button>
-            
-            </div>
+            <span class="error" id="gender-error"></span>
         </div>
-        </form>
+        <div class="tins">
+            <label for="message">Order:</label>
+            <textarea id="message" name="order" placeholder="Enter your order here..."></textarea>
+            <span class="error" id="message-error"></span>
+        </div>
+        <div class="tins">
+            <label for="date">Collection date:</label>
+            <input type="date" id="date" name="date">
+            <span class="error" id="date-error"></span>
+            <p id="date-message">Please place your order at least 2 days before the date you want to collect it.</p>
+        </div>
+        <div class="submit-1">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
     </section>
+    <div id="enquiry-response" class="response-box" aria-live="polite" hidden></div>
+
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion-item">
+        <button type="button" class="accordion-header" aria-expanded="false">How much notice do you need for an order?</button>
+        <div class="accordion-panel"><p>We need at least 2 days to prepare your order. For large celebration cakes, the earlier the better.</p></div>
+    </div>
+    <div class="accordion-item">
+        <button type="button" class="accordion-header" aria-expanded="false">Can I order for a wedding or birthday?</button>
+        <div class="accordion-panel"><p>Yes! Describe your cake in the order box and we will send you a quote within 24 hours.</p></div>
+    </div>
+    <div class="accordion-item">
+        <button type="button" class="accordion-header" aria-expanded="false">Do you give discounts?</button>
+        <div class="accordion-panel"><p>Yes. When you order 10 or more items you get 10% off the total.</p></div>
+    </div>
+    <div class="accordion-item">
+        <button type="button" class="accordion-header" aria-expanded="false">I have an allergy. What should I do?</button>
+        <div class="accordion-panel"><p>Click any product picture on the menu page to see its ingredients and allergens. Our kitchen handles wheat, milk, eggs and nuts, so please tell us about any allergy in your order.</p></div>
+    </div>
+</section>
 </main>
 </body>
 
