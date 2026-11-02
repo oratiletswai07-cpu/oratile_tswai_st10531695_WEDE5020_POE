@@ -143,34 +143,61 @@ README.md
 The changelog for part 2
 Part 2 feedback and corrections from the lecturer's feedback:
 [26/Oct/2026] - I fixed the vertical text error on the About page because the text was sitting on the side of the image instead of at the bottom every time I minimized the website (mobile view)
+
 [26/Oct/2026] - I improved the CSS code for the navigation bar in the media query, meaning I made a sidebar for the minimized screen and also added icons to the navigation bar links.
+
 [26/Oct/2026] - I changed the stylesheet link from ../sweets_cakes_bakery_website/css/style.css to css/style.css
-[26/Oct/2026] - I corrected a few typos in the code that tampered with the code (most CSS code wasn't working) for example i corrected soild to solid 
+
+[26/Oct/2026] - I corrected a few typos in the code that tampered with the code (most CSS code wasn't working) for example i corrected soild to solid
+
 [26/Oct/2026] - I renamed .sidebar-overlay to .menu-overlay
+
 [26/Oct/2026] - I corrected "Backery", "Gautang," and "SweetAvenue"; updated footer year to 2026 (spelling)
+
 [26/Oct/2026] - I removed two Google Maps embeds that showed other businesses
+
 [27/Oct/2026] - I removed the repeated sidebar blocks and the extra unclosed <header>
+
 [27/Oct/2026] - I changed name="first name" to name="first-name"
+
 [Most changes from part two were made in the media query.]
 
 Part 3 new features:
 [27/Oct/2026] - (menu page.html, javascript.js) -	Menu products are now built from a JavaScript list (MENU) instead of typed HTML
+
 [27/Oct/2026] - (menu page.html, javascript.js) - Search box, category filter, price sort, product count and a "not found" message
-[27/Oct/2026] - (menu page.html, javascript.js) -	Shopping cart: add, remove, change quantity, 10% discount for 10 or more items, saved in localStorage, floating cart button with counter
+
+[27/Oct/2026] - (menu page.html, javascript.js) -	Shopping cart: add, remove, change quantity, 10% discount for 10 or more items, 
+saved in localStorage, floating cart button with counter
+
 [27/Oct/2026] - (menu page.html, javascript.js) - Copy Order button and Send Order to Enquiry Form button (carries the cart to the enquiry page)
+
 [28/Oct/2026] - (menu page.html, javascript.js, styls. css) - Product details modal (lightbox) showing a large picture, price, ingredients and allergens
+
 [28/Oct/2026] - (java.js) - findAllergens function that checks each ingredient for hidden allergens (for example milk in butter, cream and chocolate)
+
 [28/Oct/2026] - (styles.css, java.js) - Scroll animations (fade and slide up) and hover transitions using CSS and the IntersectionObserver API
+
 [29/Oct/2026] - (contact.html, java.js) - Leaflet interactive map with both bakery locations, buttons to jump to each shop, and a Find My Location button that finds the nearest bakery and draws a driving route
+
 [29/Oct/2026] - (enquiries.html,java.js) - FAQ accordion (opens and closes with JavaScript)
+
 [29/Oct/2026] - (enquiries.html, java.js) - Enquiry form validation with an error message under each field (letters-only names, email format, South African phone format, age range, collection date at least 2 days ahead)
+
 [30/Oct/2026] - (java.js) - After a valid enquiry, the page shows the cost (from the cart, including the discount) and availability for the chosen date, without reloading
+
 [31/oct/2026] - (java.js) - AJAX submit using fetch (POST to a free test API). The page shows success or failure messages
+
 [31/oct/2026] - (contact.html, java.js) - Contact form validation (name, email, optional phone, message type, message length). A valid form builds an email preview and a Send button that opens the user's email app with everything filled in
+
 [31/oct/2026] - (enquiries.html, style.css, java.js) - payment methods section with a Copy Account Number button
+
 [31/oct/2026] - (all pages) - Added lang="en", unique meta descriptions, corrected heading order
+
 [01/Nov/2026] - (index.html) - Added JSON-LD structured data (Bakery) for local search
+
 [01/Nov/2026] - (robots.txt, sitemap.xml) - Added so search engines can crawl and understand the site
+
 [01/Nov/2026] - (project) - Deployed on Netlify and added the live link to this README
 
 SEO
