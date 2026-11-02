@@ -1423,3 +1423,21 @@ function findAllergens(ingredients) {
     });
     return found;
 }
+
+// Copy bakery account number
+const copyAccountButton = document.getElementById("copy-account");
+if (copyAccountButton) {
+    copyAccountButton.addEventListener("click", async () => {
+        const accountNumber = document.getElementById("account-number").textContent;
+        const copyMessage = document.getElementById("copy-message");
+        try {
+            await navigator.clipboard.writeText(accountNumber);
+            copyMessage.textContent = "Account number copied successfully!";
+            setTimeout(() => {
+    copyMessage.textContent = "";
+        }, 5000);
+        } catch (error) {
+            copyMessage.textContent = "Unable to copy. Please copy the number manually.";
+        }
+    });
+}
