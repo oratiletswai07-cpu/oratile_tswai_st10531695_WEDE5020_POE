@@ -1424,7 +1424,7 @@ iframe {
     font-weight: bold;
 }
 
-/*Payment section*/
+/* Payment section*/
 .payment-section {
     max-width: 1000px;
     margin: 40px auto;
@@ -1474,9 +1474,9 @@ iframe {
     padding: 20px;
     border-radius: 12px;
 }
-
+/* Responsive adjustments for payment section */
 @media (max-width: 768px) {
- .payment-section {
+    .payment-section {
         margin: 25px 15px;
         padding: 20px;
     }
