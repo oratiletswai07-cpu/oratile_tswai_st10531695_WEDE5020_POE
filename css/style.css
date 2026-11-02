@@ -464,7 +464,7 @@ iframe {
 .close-item {
     display: none;
 }
-.sidebar-overlay {
+.menu-overlay {
     display: none;
 }
 /*sidebar layout menu */
@@ -631,7 +631,7 @@ iframe {
         cursor: pointer;
     }
      /* dark overlay */
-    .menu-check:checked ~ header .sidebar-overlay {
+    .menu-check:checked ~ header .menu-overlay {
         display: block;
         position: fixed;
         inset: 0;
