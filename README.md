@@ -117,8 +117,100 @@ Changelog (Part 1 Feedback Addressed)
 
 more css coding will be applied in part 3 of the assignment, because due to part 2's requirements( only css code) some css coding were limited because it required javascript coding to be perfect for eaxmple the menu page.
 
+Sweet Cakes Bakery - PART 3:
+About the website:
+Sweet Cakes Bakery is a fictional family bakery with two shops (Pretoria and Johannesburg). The site lets customers browse the menu, build an order, check ingredients and allergens, send an enquiry, contact the bakery and find the nearest shop.
+
+pages: 
+index.html - Home page with featured products and opening hours.
+about.html - History, mission, vision, and target market.
+menu.html -	Dynamic menu with search, filter, sort, cart, and product details pop-up.
+enquiries.html - Order enquiry form, payment details and FAQ accordion.
+contact.html - Contact form that builds an email and an interactive map.
+
+Technologies used:
+HTML5, CSS3, JavaScript (vanilla), Leaflet 1.9.4 (interactive map), OpenStreetMap tiles, OSRM public routing service (driving route), jsonplaceholder test API (AJAX demo), Netlify (hosting), Git and GitHub.
+
+project structure:
+index.html, about.html, menu.html, enquiries.html, contact.html
+css/style.css
+js/java.js
+images/
+robots.txt
+sitemap.xml
+README.md
+
+The changelog for part 2
+Part 2 feedback and corrections from the lecturer's feedback:
+[26/Oct/2026] - I fixed the vertical text error on the About page because the text was sitting on the side of the image instead of at the bottom every time I minimized the website (mobile view)
+[26/Oct/2026] - I improved the CSS code for the navigation bar in the media query, meaning I made a sidebar for the minimized screen and also added icons to the navigation bar links.
+[26/Oct/2026] - I changed the stylesheet link from ../sweets_cakes_bakery_website/css/style.css to css/style.css
+[26/Oct/2026] - I corrected a few typos in the code that tampered with the code (most CSS code wasn't working) for example i corrected soild to solid 
+[26/Oct/2026] - I renamed .sidebar-overlay to .menu-overlay
+[26/Oct/2026] - I corrected "Backery", "Gautang," and "SweetAvenue"; updated footer year to 2026 (spelling)
+[26/Oct/2026] - I removed two Google Maps embeds that showed other businesses
+[27/Oct/2026] - I removed the repeated sidebar blocks and the extra unclosed <header>
+[27/Oct/2026] - I changed name="first name" to name="first-name"
+[Most changes from part two were made in the media query.]
+
+Part 3 new features:
+[27/Oct/2026] - (menu page.html, javascript.js) -	Menu products are now built from a JavaScript list (MENU) instead of typed HTML
+[27/Oct/2026] - (menu page.html, javascript.js) - Search box, category filter, price sort, product count and a "not found" message
+[27/Oct/2026] - (menu page.html, javascript.js) -	Shopping cart: add, remove, change quantity, 10% discount for 10 or more items, saved in localStorage, floating cart button with counter
+[27/Oct/2026] - (menu page.html, javascript.js) - Copy Order button and Send Order to Enquiry Form button (carries the cart to the enquiry page)
+[28/Oct/2026] - (menu page.html, javascript.js, styls. css) - Product details modal (lightbox) showing a large picture, price, ingredients and allergens
+[28/Oct/2026] - (java.js) - findAllergens function that checks each ingredient for hidden allergens (for example milk in butter, cream and chocolate)
+[28/Oct/2026] - (styles.css, java.js) - Scroll animations (fade and slide up) and hover transitions using CSS and the IntersectionObserver API
+[29/Oct/2026] - (contact.html, java.js) - Leaflet interactive map with both bakery locations, buttons to jump to each shop, and a Find My Location button that finds the nearest bakery and draws a driving route
+[29/Oct/2026] - (enquiries.html,java.js) - FAQ accordion (opens and closes with JavaScript)
+[29/Oct/2026] - (enquiries.html, java.js) - Enquiry form validation with an error message under each field (letters-only names, email format, South African phone format, age range, collection date at least 2 days ahead)
+[30/Oct/2026] - (java.js) - After a valid enquiry, the page shows the cost (from the cart, including the discount) and availability for the chosen date, without reloading
+[31/oct/2026] - (java.js) - AJAX submit using fetch (POST to a free test API). The page shows success or failure messages
+[31/oct/2026] - (contact.html, java.js) - Contact form validation (name, email, optional phone, message type, message length). A valid form builds an email preview and a Send button that opens the user's email app with everything filled in
+[31/oct/2026] - (enquiries.html, style.css, java.js) - payment methods section with a Copy Account Number button
+[31/oct/2026] - (all pages) - Added lang="en", unique meta descriptions, corrected heading order
+[01/Nov/2026] - (index.html) - Added JSON-LD structured data (Bakery) for local search
+[01/Nov/2026] - (robots.txt, sitemap.xml) - Added so search engines can crawl and understand the site
+[01/Nov/2026] - (project) - Deployed on Netlify and added the live link to this README
+
+SEO
+(on-page SEO):
+Keyword research: I chose keywords customers would really type, such as "bakery Pretoria", "custom cakes", "fresh bread", "birthday cakes" and "wedding cakes", and used them naturally in headings, descriptions and body text.
+Title tags and meta descriptions: every page has its own title and a description of about 150 characters.
+Header tags: each page has one h1, then h2 and h3 in order.
+Image optimisation: descriptive alt text and descriptive file names; images below the fold use lazy loading.
+URL structure: short, readable file names (menu.html, contact.html).
+Internal linking: every page links to the others through the navigation, and buttons such as "Straight to Ordering" and "Place a Custom Order" link between pages.
+Mobile-friendliness: the viewport meta tag, flexible layouts and media queries at 768px, 600px, 480px and 380px.
+
+SEO (off-page):
+Backlinks: list the bakery on local business directories and ask local event planners and wedding blogs to link to the site.
+Social media: share new products and offers on Facebook and Instagram with a link back to the menu page.
+Local SEO: claim a Google Business Profile for both shops; addresses, phone numbers and opening hours on the site match the structured data.
+
+Technical SEO:
+robots.txt allows crawling and points to the sitemap.
+sitemap.xml lists all five pages.
+Structured data: JSON-LD Bakery schema on the home page.
+Page speed: scripts use defer, images are lazy-loaded and compressed, and no large libraries are used apart from Leaflet.
+
+Security:
+The site is served over HTTPS by Netlify.
+All form input is validated on the client side with JavaScript before it is used. User text is escaped with escapeHtml before it is shown on the page, which helps prevent cross-site scripting (XSS).
+Security headers are set in the _headers file (no framing, no content-type guessing, restricted referrer and permissions).
+No passwords or card numbers are collected. The banking details on the enquiry page are fictional sample details.
+Location is only requested when the user clicks Find My Location.
+
+Known limitations:
+The enquiry form sends data to a free test API (jsonplaceholder), so nothing is stored. A real bakery would use its own server or a form service.
+The contact form uses mailto, so it needs an email app on the user's device.
+The driving route uses the public OSRM demo server, which may be slow or busy.
+
+Tools and AI assistance:
+I used Claude (an AI assistant) to help with some JavaScript for the forms, the map, and the allergen checker. I tested, edited, and understand all of the code in this project.
+
 References:
-Part 1 refereneces:
+Part 1 references:
 
 References images  
 
@@ -186,7 +278,7 @@ New Perspective Studio (n.d.) *Website Design Cost South Africa*. [Online] Avail
 
 Dot Digital (n.d.) *How Much Does a Website Cost in South Africa? 2026 Guide*. [Online] Available at: https://dotdigital.co.za/website-cost-south-africa/ [Accessed: 8 August 2026]. 
 
- Part 2 references:
+PART 2 references:
  
 CSSnippets. 2025. Learn CSS Display Property: Inline, Block, Inline-Block Explained in 4 Minutes! [YouTube video]. 23 June. Available at: https://youtu.be/zI6DW1Sinqc [Accessed: 16 September 2026].
 
@@ -202,3 +294,37 @@ Dani Krossing. 2023. 24 | MAKE A WEBSITE RESPONSIVE FOR ALL DEVICES | 2023 | Lea
 
 
 Bro Code. 2023. How to include a CSS background image [YouTube video]. 21 sept. Available at: https://www.youtube.com/watch?v=_oFWg_NlKdo [Accessed: 16 September 2026].
+
+PART 3 references: 
+Agafonkin, V. 2023. Leaflet: an open-source JavaScript library for interactive maps, version 1.9.4. Available at: https://leafletjs.com [Accessed 30 october 2026].
+
+OpenStreetMap contributors. n.d. OpenStreetMap. Available at: https://www.openstreetmap.org [Accessed 30 october 2026].
+
+Project OSRM. n.d. Open Source Routing Machine. Available at: https://project-osrm.org [Accessed 30 october 2026].
+
+Alejandro AO (2023) Javascript interactive map with Leaflet EASY (with marker clusters & popups) [YouTube video]. 16 January. Available at: https://www.youtube.com/watch?v=LxenV0YaX8M (Accessed: 27 October 2026).
+
+CSSnippets (2025) How to create responsive navigation bar using HTML, CSS & JavaScript [YouTube video]. 13 January. Available at: https://www.youtube.com/watch?v=Og-YEeCTE7A (Accessed: 27 October 2026).
+
+DevWebApp (2024) Contact us form with validation in JavaScript HTML CSS. Learn how to make a form and validate it [YouTube video]. 8 April. Available at: https://www.youtube.com/watch?v=x2ItMNJI-rc (Accessed: 30 October 2026).
+
+OpenJavaScript (2023) Map with markers using Leaflet | JavaScript tutorial [YouTube video]. 5 March. Available at: https://www.youtube.com/watch?v=rdPNRZBSPdQ (Accessed: 30 October 2026).
+
+Bedimcode (n.d.) Responsive sidebar menu using HTML CSS & JavaScript [YouTube video]. Available at: https://www.youtube.com/watch?v=RhT04ifx3vw (Accessed: 30 October 2026).
+
+The Coding Train (2019) 1.5 Mapping geolocation with Leaflet.js – Working with data and APIs in JavaScript [YouTube video]. 27 May. Available at: https://www.youtube.com/results?search_query=The+Coding+Train+Mapping+Geolocation+with+Leaflet.js (Accessed: 30 October 2026)
+
+W3Schools (n.d.) HTML Tutorial. Available at: https://www.w3schools.com/html/ (Accessed: 29 October 2026).
+
+W3Schools (n.d.) CSS Tutorial. Available at: https://www.w3schools.com/css/ (Accessed: 29 October 2026).
+
+W3Schools (n.d.) JavaScript Tutorial. Available at: https://www.w3schools.com/js/ (Accessed: 30 October 2026).
+
+W3Schools (n.d.) HTML Forms. Available at: https://www.w3schools.com/html/html_forms.asp (Accessed: 31 October 2026).
+
+W3Schools (n.d.) CSS Responsive Web Design. Available at: https://www.w3schools.com/css/css_rwd_intro.asp ((Accessed: 31 October 2026)).
+
+W3Schools (n.d.) JavaScript HTML DOM. Available at: https://www.w3schools.com/js/js_htmldom.asp (Accessed: 30 October 2026).
+
+W3Schools (n.d.) JavaScript Web Storage API. Available at: https://www.w3schools.com/js/js_api_web_storage.asp (Accessed: 31 October 2026)
+
