@@ -1423,3 +1423,75 @@ iframe {
     font-size: 13px;
     font-weight: bold;
 }
+
+/*Payment section*/
+.payment-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FFF0DF;
+    border: 2px solid #D6A77A;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(74, 53, 36, 0.15);
+    color: #4A3524;
+}
+.payment-section h2 {
+    text-align: center;
+    color: #4A3524;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.payment-intro {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.payment-card {
+    background-color: #FFFFFF;
+    border: 2px solid #D6A77A;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+.payment-card h3,
+.walk-in-payment h3 {
+    color: #4A3524;
+    margin-bottom: 15px;
+}
+.payment-card p,
+.walk-in-payment p {
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+.payment-note {
+    background-color: #FFF0DF;
+    border-left: 4px solid #D6A77A;
+    padding: 12px;
+    margin-top: 20px;
+}
+.walk-in-payment {
+    background-color: #D6A77A;
+    color: #4A3524;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+ .payment-section {
+        margin: 25px 15px;
+        padding: 20px;
+    }
+
+    .payment-section h2 {
+        font-size: 24px;
+    }
+
+    .payment-card,
+    .walk-in-payment {
+        padding: 18px;
+    }
+
+    .payment-card p,
+    .walk-in-payment p {
+        overflow-wrap: anywhere;
+    }
+}
