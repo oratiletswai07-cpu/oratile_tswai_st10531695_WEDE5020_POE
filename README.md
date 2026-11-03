@@ -129,7 +129,7 @@ enquiries.html - Order enquiry form, payment details and FAQ accordion.
 contact.html - Contact form that builds an email and an interactive map.
 
 Technologies used:
-HTML5, CSS3, JavaScript (vanilla), Leaflet 1.9.4 (interactive map), OpenStreetMap tiles, OSRM public routing service (driving route), jsonplaceholder test API (AJAX demo), Netlify (hosting), Git and GitHub.
+HTML5, CSS3, JavaScript (vanilla), Leaflet 1.9.4 (interactive map), OpenStreetMap tiles, OSRM public routing service (driving route), jsonplaceholder test API (AJAX demo), Git Hub pages, Git and GitHub.
 
 project structure:
 index.html, about.html, menu.html, enquiries.html, contact.html
@@ -198,7 +198,7 @@ saved in localStorage, floating cart button with counter
 
 [01/Nov/2026] - (robots.txt, sitemap.xml) - Added so search engines can crawl and understand the site
 
-[01/Nov/2026] - (project) - Deployed on Netlify and added the live link to this README
+[01/Nov/2026] - (project) - Deployed on github pages and added the live link to this README
 
 SEO
 (on-page SEO):
@@ -220,13 +220,6 @@ robots.txt allows crawling and points to the sitemap.
 sitemap.xml lists all five pages.
 Structured data: JSON-LD Bakery schema on the home page.
 Page speed: scripts use defer, images are lazy-loaded and compressed, and no large libraries are used apart from Leaflet.
-
-Security:
-The site is served over HTTPS by Netlify.
-All form input is validated on the client side with JavaScript before it is used. User text is escaped with escapeHtml before it is shown on the page, which helps prevent cross-site scripting (XSS).
-Security headers are set in the _headers file (no framing, no content-type guessing, restricted referrer and permissions).
-No passwords or card numbers are collected. The banking details on the enquiry page are fictional sample details.
-Location is only requested when the user clicks Find My Location.
 
 Known limitations:
 The enquiry form sends data to a free test API (jsonplaceholder), so nothing is stored. A real bakery would use its own server or a form service.
