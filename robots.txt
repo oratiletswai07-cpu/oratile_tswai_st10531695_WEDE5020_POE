@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /
+Allow: /        
 
+<<<<<<< HEAD
 Sitemap:https://oratiletswai07-cpu.github.io/oratile_tswai_st10531695_WEDE5020_POE/
