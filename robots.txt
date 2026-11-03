@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https:https://oratiletswai07-cpu.github.io/oratile_tswai_st10531695_WEDE5020_POE/
+Sitemap:https://oratiletswai07-cpu.github.io/oratile_tswai_st10531695_WEDE5020_POE/
